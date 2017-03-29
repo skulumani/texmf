@@ -1039,10 +1039,31 @@
   date-modified = {2016-09-28 00:04:10 +0000},
   doi           = {10.2514/2.4620},
   file          = {liaw2000.pdf:liaw2000.pdf:PDF},
+  groups        = {Asteroid Landing},
   isbn          = {0731-5090},
   journal1      = {Journal of Guidance, Control, and Dynamics},
+  keywords      = {read, landing, astrodynamics, sliding mode control, nonlinear control},
   m3            = {doi: 10.2514/2.4620},
   publisher     = {American Institute of Aeronautics and Astronautics},
+  review        = {## Summary
+
+Presents a sliding mode controller for rendezvous with a celestial object
+
+## Assumptions
+
+* Only treats translational dynamics
+* Kinematics described in terms of a spherical coordinate representation
+* Two body gravitational model
+* Exponential drag model and matched uncertainties are treated as external disturbances
+
+## Issues
+
+* Due to spherical coordinate representation they did not consider the approach from a different direction
+* Fairly standard SMC application
+* Stability/region of attraciton proof not fully developed
+* Only allows for a bounded tracking 
+* Assumes a stationary target (nonrotating asteroid)},
+  timestamp     = {2017.03.29 10:03},
   ty            = {JOUR},
   url           = {http://dx.doi.org/10.2514/2.4620},
   year1         = {2000},
@@ -4438,10 +4459,15 @@
   volume        = {17},
   number        = {1},
   pages         = {15--20},
-  bdsk-file-1   = {YnBsaXN0MDDUAQIDBAUGJCVYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKgHCBMUFRYaIVUkbnVsbNMJCgsMDxJXTlMua2V5c1pOUy5vYmplY3RzViRjbGFzc6INDoACgAOiEBGABIAFgAdccmVsYXRpdmVQYXRoWWFsaWFzRGF0YV8QRi4uLy4uLy4uLy4uL0RyaXZlL2RvY3MvdGVjaG5pY2FsX3BhcGVycy9iaWJkZXNrX3BhcGVycy9ndWVsbWFuMTk5NC5wZGbSFwsYGVdOUy5kYXRhTxEB2gAAAAAB2gACAAAMTWFjaW50b3NoIEhEAAAAAAAAAAAAAAAAAAAA0KjgG0grAAABAOVmD2d1ZWxtYW4xOTk0LnBkZgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA67LSM0ojAAAAAAAAAAAABAAFAAAJIAAAAAAAAAAAAAAAAAAAAA5iaWJkZXNrX3BhcGVycwAQAAgAANCpJmsAAAARAAgAANIzgmMAAAABABgBAOVmAQDlZQEA5WQACtUuAAYeewACk6AAAgBbTWFjaW50b3NoIEhEOlVzZXJzOgBzaGFua2FyOgBEcml2ZToAZG9jczoAdGVjaG5pY2FsX3BhcGVyczoAYmliZGVza19wYXBlcnM6AGd1ZWxtYW4xOTk0LnBkZgAADgAgAA8AZwB1AGUAbABtAGEAbgAxADkAOQA0AC4AcABkAGYADwAaAAwATQBhAGMAaQBuAHQAbwBzAGgAIABIAEQAEgBIVXNlcnMvc2hhbmthci9Ecml2ZS9kb2NzL3RlY2huaWNhbF9wYXBlcnMvYmliZGVza19wYXBlcnMvZ3VlbG1hbjE5OTQucGRmABMAAS8AABUAAgAO//8AAIAG0hscHR5aJGNsYXNzbmFtZVgkY2xhc3Nlc11OU011dGFibGVEYXRhox0fIFZOU0RhdGFYTlNPYmplY3TSGxwiI1xOU0RpY3Rpb25hcnmiIiBfEA9OU0tleWVkQXJjaGl2ZXLRJidUcm9vdIABAAgAEQAaACMALQAyADcAQABGAE0AVQBgAGcAagBsAG4AcQBzAHUAdwCEAI4A1wDcAOQCwgLEAskC1ALdAusC7wL2Av8DBAMRAxQDJgMpAy4AAAAAAAACAQAAAAAAAAAoAAAAAAAAAAAAAAAAAAADMA==},
   date-added    = {2015-10-02 00:37:35 +0000},
   date-modified = {2015-10-02 00:37:40 +0000},
   file          = {guelman1994.pdf:guelman1994.pdf:PDF},
+  groups        = {Asteroid Landing},
+  keywords      = {read, astrodynamics, landing, dynamic, optimization},
+  review        = {* Considers only spherical gravity
+* Optimal solution given for two dimensional translational situation
+* Analytical solution of desired acceleration},
+  timestamp     = {2017.03.29 09:03},
 }
 
 @InProceedings{saaj2006,
@@ -4802,8 +4828,11 @@
   file          = {acikmese2007.pdf:acikmese2007.pdf:PDF},
   isbn          = {0731-5090},
   journal1      = {Journal of Guidance, Control, and Dynamics},
+  keywords      = {read, landing, astrodynamics, Optimization},
   m3            = {doi: 10.2514/1.27553},
   publisher     = {American Institute of Aeronautics and Astronautics},
+  review        = {Doesn't consider attitude dynamics.},
+  timestamp     = {2017.03.29 09:03},
   ty            = {JOUR},
   url           = {http://dx.doi.org/10.2514/1.27553},
   year1         = {2007},
@@ -14693,6 +14722,19 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
   url         = {https://ntrs.nasa.gov/search.jsp?R=19660027747},
 }
 
+@Inproceedings{ueno1999,
+  author    = {Ueno, Seiya and Yamaguchi, Yoshitake},
+  title     = {3-dimensional near-minimum fuel guidance law of a lunar landing module},
+  booktitle = {Proceedings of AIAA Guidance, Navigation, and Control Conference, Portland OR},
+  year      = {1999},
+  publisher = {American Institute of Aeronautics and Astronautics},
+  doi       = {doi:10.2514/6.1999-3983},
+  file      = {Paper:ueno1999.pdf:PDF},
+  journal   = {Guidance, Navigation, and Control Conference and Exhibit},
+  owner     = {shankar},
+  timestamp = {2017.03.29 13:03},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
 
 @Comment{jabref-meta: groupstree:
@@ -14704,6 +14746,7 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
 2 SearchGroup:Robotics\;0\;keywords=robotics or keywords=robot or keywords=robots\;0\;0\;;
 1 ExplicitGroup:Islam paper\;0\;;
 1 ExplicitGroup:Computer Science\;0\;;
+1 ExplicitGroup:Asteroid Landing\;0\;;
 }
 
 @Comment{jabref-meta: saveActions:enabled;
