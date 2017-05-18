@@ -1008,6 +1008,10 @@
   journal1      = {Journal of Guidance, Control, and Dynamics},
   m3            = {doi: 10.2514/3.20877},
   publisher     = {American Institute of Aeronautics and Astronautics},
+  review        = {* only translation considered
+* autonomously switches to a closed-loop control mode once a specific altitude is reached
+* controller will maintain position along surface normal and maintain descent speed below some maximum},
+  timestamp     = {2017.05.18 16:05},
   ty            = {JOUR},
   url           = {http://dx.doi.org/10.2514/3.20877},
   year1         = {1992},
@@ -14986,20 +14990,24 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
 }
 
 @InProceedings{cheng2005,
-  author    = {Yang Cheng and A. Ansar},
-  title     = {Landmark Based Position Estimation for Pinpoint Landing on Mars},
-  booktitle = {Proceedings of the 2005 IEEE International Conference on Robotics and Automation},
-  year      = {2005},
-  pages     = {1573--1578},
-  month     = apr,
-  abstract  = {Many of NASA's planned missions for the coming decade will require a pinpoint landing (PPL) capability, whether for sample acquisition and return or for precise insertion into hazardous but scientifically interesting terrain. Thus, a robust spacecraft-based position estimation system is a critical near term need. We present in this paper a vision-based system, which provides a low power, low cost, high accuracy solution with flight proven hardware. The key components of our image based localization approach are: (1) real-time detection of landmarks in descent imagery, (2) real-time matching of detected landmarks to a stored database, and (3) robust estimation of spacecraft state (position, attitude and velocity) from matched 2D-3D data. We present an analysis of the performance and noise sensitivity of our system and show that the suggested technology is able to deliver a spacecraft to within 100 meters of a pre-selected landing site in a typical Mars landing scenario.},
-  doi       = {10.1109/ROBOT.2005.1570338},
-  file      = {:cheng2005.pdf:PDF},
-  groups    = {Landing},
-  issn      = {1050-4729},
-  keywords  = {Pinpoint landing;landmark detection;landmark matching;position estimation;Hazards;Laboratories;Mars;Motion estimation;NASA;Navigation;Propulsion;Robustness;Space technology;Space vehicles;Pinpoint landing;landmark detection;landmark matching;position estimation},
-  owner     = {shankar},
-  timestamp = {2017.05.18 10:05},
+  author     = {Yang Cheng and A. Ansar},
+  title      = {Landmark Based Position Estimation for Pinpoint Landing on Mars},
+  booktitle  = {Proceedings of the 2005 IEEE International Conference on Robotics and Automation},
+  year       = {2005},
+  pages      = {1573--1578},
+  month      = apr,
+  abstract   = {Many of NASA's planned missions for the coming decade will require a pinpoint landing (PPL) capability, whether for sample acquisition and return or for precise insertion into hazardous but scientifically interesting terrain. Thus, a robust spacecraft-based position estimation system is a critical near term need. We present in this paper a vision-based system, which provides a low power, low cost, high accuracy solution with flight proven hardware. The key components of our image based localization approach are: (1) real-time detection of landmarks in descent imagery, (2) real-time matching of detected landmarks to a stored database, and (3) robust estimation of spacecraft state (position, attitude and velocity) from matched 2D-3D data. We present an analysis of the performance and noise sensitivity of our system and show that the suggested technology is able to deliver a spacecraft to within 100 meters of a pre-selected landing site in a typical Mars landing scenario.},
+  doi        = {10.1109/ROBOT.2005.1570338},
+  file       = {:cheng2005.pdf:PDF},
+  groups     = {Landing},
+  issn       = {1050-4729},
+  keywords   = {Pinpoint landing;landmark detection;landmark matching;position estimation;Hazards;Laboratories;Mars;Motion estimation;NASA;Navigation;Propulsion;Robustness;Space technology;Space vehicles;Pinpoint landing;landmark detection;landmark matching;position estimation, skimmed},
+  owner      = {shankar},
+  review     = {* Real-time visual detection of landmarks and obstacles
+* Estimation of state from optical landmark based tracking
+* Crater tracking and comparing to known database
+* Only really focused on vision/image processing},
+  timestamp  = {2017.05.18 16:05},
 }
 
 @Article{mourikis2009,
