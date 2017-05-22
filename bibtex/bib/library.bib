@@ -15117,20 +15117,35 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
 }
 
 @InProceedings{johnson2000,
-  author    = {A. E. Johnson and Yang Cheng and L. H. Matthies},
-  title     = {Machine Vision for Autonomous Small Body Navigation},
-  booktitle = {2000 IEEE Aerospace Conference. Proceedings (Cat. No.00TH8484)},
-  year      = {2000},
-  volume    = {7},
-  pages     = {661-671 vol.7},
-  abstract  = {This paper describes machine vision algorithms that enable precision guidance and hazard avoidance during small body exploration through onboard visual feature tracking and landmark recognition. These algorithms provide estimates of spacecraft relative motion and absolute position used to guide the spacecraft during autonomous landing and exploration. They also enable hazard avoidance by providing estimates of 3-D surface topography through processing of monocular image streams. This form of onboard autonomy is a critical enabling technology for multiple future missions including Comet Nucleus Sample Return, Large Asteroid Sample Return, Titan Organics Explorer and Europa Lander and Mars lander missions},
-  doi       = {10.1109/AERO.2000.879333},
-  file      = {:johnson2000.pdf:PDF},
-  groups    = {Landing, Computer vision},
-  issn      = {1095-323X},
-  keywords  = {aerospace control;computer vision;computerised navigation;feature extraction;motion estimation;space research;stereo image processing;3D surface topography;Comet Nucleus Sample Return;Europa Lander;Large Asteroid Sample Return;Mars lander missions;Titan Organics Explorer;absolute position;autonomous small body navigation;critical enabling technology;hazard avoidance;landmark recognition;monocular image streams;multiple future missions;onboard autonomy;onboard visual feature tracking;precision guidance;small body exploration;spacecraft relative motion;Cameras;Hazards;Machine vision;Moon;Motion estimation;Navigation;Optical sensors;Space vehicles;Streaming media;Surface topography},
-  owner     = {shankar},
-  timestamp = {2017.05.19 13:05},
+  author     = {A. E. Johnson and Yang Cheng and L. H. Matthies},
+  title      = {Machine Vision for Autonomous Small Body Navigation},
+  booktitle  = {2000 IEEE Aerospace Conference. Proceedings (Cat. No.00TH8484)},
+  year       = {2000},
+  volume     = {7},
+  pages      = {661-671 vol.7},
+  abstract   = {This paper describes machine vision algorithms that enable precision guidance and hazard avoidance during small body exploration through onboard visual feature tracking and landmark recognition. These algorithms provide estimates of spacecraft relative motion and absolute position used to guide the spacecraft during autonomous landing and exploration. They also enable hazard avoidance by providing estimates of 3-D surface topography through processing of monocular image streams. This form of onboard autonomy is a critical enabling technology for multiple future missions including Comet Nucleus Sample Return, Large Asteroid Sample Return, Titan Organics Explorer and Europa Lander and Mars lander missions},
+  doi        = {10.1109/AERO.2000.879333},
+  file       = {:johnson2000.pdf:PDF},
+  groups     = {Landing, Computer vision},
+  issn       = {1095-323X},
+  keywords   = {aerospace control;computer vision;computerised navigation;feature extraction;motion estimation;space research;stereo image processing;3D surface topography;Comet Nucleus Sample Return;Europa Lander;Large Asteroid Sample Return;Mars lander missions;Titan Organics Explorer;absolute position;autonomous small body navigation;critical enabling technology;hazard avoidance;landmark recognition;monocular image streams;multiple future missions;onboard autonomy;onboard visual feature tracking;precision guidance;small body exploration;spacecraft relative motion;Cameras;Hazards;Machine vision;Moon;Motion estimation;Navigation;Optical sensors;Space vehicles;Streaming media;Surface topography, read},
+  owner      = {shankar},
+  review     = {* Seems to be three steps that are generally used for image based navigation
+  1. Feature based state estimation
+    * Use features between successive images to estimate the position of the vehicle
+    * Useful for maintaining continous state measurements of the relative state of the vehicle with respect ot the images
+    * Doe not give absolute information
+  2. Landmark based state estimation
+    * Compare some 3-D feature with a a priori map of the surface
+    * Provides absolute state information relative to the surface
+    * More costly to implement since new measurements should be compared to the entire surface map
+    * Both methods work together to provide state measruements
+  3. Hazard detection and avoidance (eventually)
+    * Look at features of the imagery that suggests roughness or high slope
+    * Avoid these areas
+
+* This paper has lots of good references},
+  timestamp  = {2017.05.22 16:05},
 }
 
 @Article{guy1997,
