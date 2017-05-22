@@ -15099,7 +15099,25 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
   issn       = {1095-323X},
   keywords   = {Moon;aircraft landing guidance;inertial navigation;terrain mapping;a priori reference map;active sensors;area correlation;autonomous landing;contour matching;digital elevation map data set;hazard avoidance;inertial navigation;lunar imaging;lunar surface;precise lunar landing;surface landmark;terrain relative navigation;Aircraft navigation;Extraterrestrial measurements;Hazards;Image sensors;Inertial navigation;Land surface;Lighting;Moon;Optical imaging;Position measurement, read, rank5},
   owner      = {shankar},
-  timestamp  = {2017.05.19 13:05},
+  review     = {* Good survey paper of vision based naviation algorithms and approaches
+* Terrain relative navigation used in the terminal descent phase to augment global measurements during landing
+* Sensors can be broken up into passive vs. active
+  1. Passive sensors - imaging sensors which take a picture
+    * Many mature space sensors
+    * Low power/cost/mass
+    * Functional at any altitude
+    * Require proper illumination/surface lighting to work
+  2. Active range sensors - laser or other rangefinders
+    * Functional in the dark
+    * Limited range
+    * Less mature and more expensive to qualify for space
+* Algorithms are broken into pattern matching vs. correlation based 
+  1. Pattern Matching - using features across images to infer motion
+  2. Correlation - compare specific image signatures to a known map
+
+* Absolute estimation requires a map of the surface
+* Long duration mapping might not be possible for some missions (imminent impact, anomalies etc)},
+  timestamp  = {2017.05.22 16:05},
 }
 
 @Article{rogata2007,
