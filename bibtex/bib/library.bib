@@ -15043,22 +15043,35 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
 }
 
 @Article{shuang2005,
-  author    = {Li Shuang and Cui Hutao and Cui Pingyuan},
-  title     = {Autonomous Optical Navigation for Landing on Asteroids},
-  journal   = {Aircraft Engineering and Aerospace Technology},
-  year      = {2005},
-  volume    = {77},
-  number    = {4},
-  pages     = {317--323},
-  abstract  = { Purpose – In order to succeed in landing asteroids, good accuracy autonomous navigation is absolutely necessary. Aims to describe a new autonomous navigation algorithm.Design/methodology/approach – First, gray images of asteroid surface are acquired by optical navigation camera, and nature feature points are detected and tracked autonomously. Second, the directional vector from spacecraft to the center of each feature point can be computed from the image coordinates in camera focal plane. Then, LIDAR/LRF is directed to three feature points and the distances from spacecraft to feature points are obtained. Last, the relative position vector from spacecraft to the target asteroid is reconstructed base on measurement outputs of navigation cameras and laser light radar (laser range finder).Findings – Suppose the initial conditions presented in this paper, the autonomous optical navigation position error and velocity error are less than 1 m and 0.1 m/s, respectively; this navigation accuracy can satisfy the requirement of soft landing on asteroids.Originality/value – Based on feature detection and tracking, an autonomous optical navigation scheme is brought out and the validity is confirmed by computer simulation. },
-  doi       = {10.1108/00022660510606402},
-  eprint    = {http://dx.doi.org/10.1108/00022660510606402},
-  file      = {:shuang2005.pdf:PDF},
-  groups    = {Landing},
-  keywords  = {landing, asteroid, vision-based landing},
-  owner     = {shankar},
-  timestamp = {2017.05.19 13:05},
-  url       = { http://dx.doi.org/10.1108/00022660510606402},
+  author     = {Li Shuang and Cui Hutao and Cui Pingyuan},
+  title      = {Autonomous Optical Navigation for Landing on Asteroids},
+  journal    = {Aircraft Engineering and Aerospace Technology},
+  year       = {2005},
+  volume     = {77},
+  number     = {4},
+  pages      = {317--323},
+  abstract   = { Purpose – In order to succeed in landing asteroids, good accuracy autonomous navigation is absolutely necessary. Aims to describe a new autonomous navigation algorithm.Design/methodology/approach – First, gray images of asteroid surface are acquired by optical navigation camera, and nature feature points are detected and tracked autonomously. Second, the directional vector from spacecraft to the center of each feature point can be computed from the image coordinates in camera focal plane. Then, LIDAR/LRF is directed to three feature points and the distances from spacecraft to feature points are obtained. Last, the relative position vector from spacecraft to the target asteroid is reconstructed base on measurement outputs of navigation cameras and laser light radar (laser range finder).Findings – Suppose the initial conditions presented in this paper, the autonomous optical navigation position error and velocity error are less than 1 m and 0.1 m/s, respectively; this navigation accuracy can satisfy the requirement of soft landing on asteroids.Originality/value – Based on feature detection and tracking, an autonomous optical navigation scheme is brought out and the validity is confirmed by computer simulation. },
+  doi        = {10.1108/00022660510606402},
+  eprint     = {http://dx.doi.org/10.1108/00022660510606402},
+  file       = {:shuang2005.pdf:PDF},
+  groups     = {Computer vision, Surface Landing},
+  keywords   = {landing, asteroid, vision-based landing, read},
+  owner      = {shankar},
+  review     = {* Autonoumously land on asteroids
+* Only discusses teh vision based state estimation
+  * Uses imagery from the NEAR mission for simulation and testing
+  * Detect features in each image
+  * Track those features across the images
+  * Find the motion of the vehicle between the frames
+  * Use this state measurement and feed into a EKF
+* EKF is able to acurately track motion
+
+* No detail in control of actually trying to land
+* No stochastic properties are given
+* Spherical harmonic gravity model
+* Point mass approximation - missing attitude control},
+  timestamp  = {2017.05.22 16:05},
+  url        = { http://dx.doi.org/10.1108/00022660510606402},
 }
 
 @InProceedings{cocaud2010,
@@ -15067,25 +15080,26 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
   booktitle = {Proceedings of the International Symposium on Artifical Intelligence, Robotics and Automation in Space},
   year      = {2010},
   file      = {:cocaud2010.pdf:PDF},
-  groups    = {Landing},
+  groups    = {Surface Landing},
   owner     = {shankar},
   timestamp = {2017.05.19 13:05},
 }
 
 @InProceedings{johnson2008,
-  author    = {A. E. Johnson and J. F. Montgomery},
-  title     = {Overview of Terrain Relative Navigation Approaches for Precise Lunar Landing},
-  booktitle = {2008 IEEE Aerospace Conference},
-  year      = {2008},
-  pages     = {1--10},
-  month     = mar,
-  abstract  = {The driving precision landing requirement for the Autonomous Landing and Hazard Avoidance Technology project is to autonomously land within 100 m of a predetermined location on the lunar surface. Traditional lunar landing approaches based on inertial sensing do not have the navigational precision to meet this requirement. The purpose of Terrain Relative Navigation (TRN) is to augment inertial navigation by providing position or bearing measurements relative to known surface landmarks. From these measurements, the navigational precision can be reduced to a level that meets the 100 m requirement. There are three different TRN functions: global position estimation, local position estimation and velocity estimation. These functions can be achieved with active range sensing or passive imaging. This paper gives a survey of many TRN approaches and then presents some high fidelity simulation results for contour matching and area correlation approaches to TRN using active sensors. Since TRN requires an a-priori reference map, the paper concludes by describing past and future lunar imaging and digital elevation map data sets available for this purpose.},
-  doi       = {10.1109/AERO.2008.4526302},
-  file      = {:johnson2008.pdf:PDF},
-  issn      = {1095-323X},
-  keywords  = {Moon;aircraft landing guidance;inertial navigation;terrain mapping;a priori reference map;active sensors;area correlation;autonomous landing;contour matching;digital elevation map data set;hazard avoidance;inertial navigation;lunar imaging;lunar surface;precise lunar landing;surface landmark;terrain relative navigation;Aircraft navigation;Extraterrestrial measurements;Hazards;Image sensors;Inertial navigation;Land surface;Lighting;Moon;Optical imaging;Position measurement},
-  owner     = {shankar},
-  timestamp = {2017.05.19 13:05},
+  author     = {A. E. Johnson and J. F. Montgomery},
+  title      = {Overview of Terrain Relative Navigation Approaches for Precise Lunar Landing},
+  booktitle  = {2008 IEEE Aerospace Conference},
+  year       = {2008},
+  pages      = {1--10},
+  month      = mar,
+  abstract   = {The driving precision landing requirement for the Autonomous Landing and Hazard Avoidance Technology project is to autonomously land within 100 m of a predetermined location on the lunar surface. Traditional lunar landing approaches based on inertial sensing do not have the navigational precision to meet this requirement. The purpose of Terrain Relative Navigation (TRN) is to augment inertial navigation by providing position or bearing measurements relative to known surface landmarks. From these measurements, the navigational precision can be reduced to a level that meets the 100 m requirement. There are three different TRN functions: global position estimation, local position estimation and velocity estimation. These functions can be achieved with active range sensing or passive imaging. This paper gives a survey of many TRN approaches and then presents some high fidelity simulation results for contour matching and area correlation approaches to TRN using active sensors. Since TRN requires an a-priori reference map, the paper concludes by describing past and future lunar imaging and digital elevation map data sets available for this purpose.},
+  doi        = {10.1109/AERO.2008.4526302},
+  file       = {:johnson2008.pdf:PDF},
+  groups     = {Computer vision, Surface Landing},
+  issn       = {1095-323X},
+  keywords   = {Moon;aircraft landing guidance;inertial navigation;terrain mapping;a priori reference map;active sensors;area correlation;autonomous landing;contour matching;digital elevation map data set;hazard avoidance;inertial navigation;lunar imaging;lunar surface;precise lunar landing;surface landmark;terrain relative navigation;Aircraft navigation;Extraterrestrial measurements;Hazards;Image sensors;Inertial navigation;Land surface;Lighting;Moon;Optical imaging;Position measurement, read, rank5},
+  owner      = {shankar},
+  timestamp  = {2017.05.19 13:05},
 }
 
 @Article{rogata2007,
