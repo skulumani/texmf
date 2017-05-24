@@ -15089,14 +15089,26 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
 }
 
 @InProceedings{cocaud2010,
-  author    = {C. Cocaud and T. Kubota},
-  title     = {Surf-based {SLAM} Scheme Using Octree Occupancy Grid for Autonomous Landing on Asteroids},
-  booktitle = {Proceedings of the International Symposium on Artifical Intelligence, Robotics and Automation in Space},
-  year      = {2010},
-  file      = {:cocaud2010.pdf:PDF},
-  groups    = {Surface Landing},
-  owner     = {shankar},
-  timestamp = {2017.05.19 13:05},
+  author     = {C. Cocaud and T. Kubota},
+  title      = {Surf-based {SLAM} Scheme Using Octree Occupancy Grid for Autonomous Landing on Asteroids},
+  booktitle  = {Proceedings of the International Symposium on Artifical Intelligence, Robotics and Automation in Space},
+  year       = {2010},
+  file       = {:cocaud2010.pdf:PDF},
+  groups     = {Surface Landing},
+  keywords   = {read},
+  owner      = {shankar},
+  review     = {* Only shows the SLAM algorithm
+* Uses a linearized dynamics model
+* Doesn't discuss control or following the trajectory estimate
+* Uses a particle filter and vision/lidar based pose estimation
+* Lots of SLAM references and details
+* The approach requires a revisit to the same area in order to close the loop of the SLAM mapping generation
+
+* Vision imagery at asteroids are difficult
+  * Sparse features (craters) at an asteroid
+  * Bad lighting
+  * Teleoperation is not possible. All processing must happen on board},
+  timestamp  = {2017.05.24 16:05},
 }
 
 @InProceedings{johnson2008,
@@ -15135,31 +15147,42 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
 }
 
 @Article{rogata2007,
-  author    = {Paola Rogata and Emanuele Di Sotto and Francisco C{\^{a}}mara and Augusto Caramagno and J.M. Rebord{\~{a}}o and B. Correia and P. Duarte and Salvatore Mancuso},
-  title     = {Design and Performance Assessment of Hazard Avoidance Techniques for Vision-based Landing},
-  journal   = {Acta Astronautica},
-  year      = {2007},
-  volume    = {61},
-  number    = {1-6},
-  pages     = {63--77},
-  issn      = {0094-5765},
-  doi       = {10.1016/j.actaastro.2007.01.030},
-  file      = {:rogata2007.pdf:PDF},
-  groups    = {Crater Detection, Surface Landing},
-  owner     = {shankar},
-  timestamp = {2017.05.19 13:05},
+  author     = {Paola Rogata and Emanuele Di Sotto and Francisco C{\^{a}}mara and Augusto Caramagno and J.M. Rebord{\~{a}}o and B. Correia and P. Duarte and Salvatore Mancuso},
+  title      = {Design and Performance Assessment of Hazard Avoidance Techniques for Vision-based Landing},
+  journal    = {Acta Astronautica},
+  year       = {2007},
+  volume     = {61},
+  number     = {1-6},
+  pages      = {63--77},
+  issn       = {0094-5765},
+  doi        = {10.1016/j.actaastro.2007.01.030},
+  file       = {:rogata2007.pdf:PDF},
+  groups     = {Crater Detection, Surface Landing, Computer vision},
+  keywords   = {read},
+  owner      = {shankar},
+  review     = {* Provides a more closed-loop approach to asteroid landing
+* This paper used the PANGU image generation tool
+* Vision cameras are used to detect craters/hazard, find safe areas, generate a trajectory to the safe site
+* Details about dynamic model (3DOF vs 6DOF, type of controllers etc) are not really given},
+  timestamp  = {2017.05.24 17:05},
 }
 
 @InProceedings{li2008,
-  author    = {Li, Shuang},
-  title     = {Computer Vision Based Autonomous Navigation for Pin-point Landing Robotic Spacecraft on Asteroids},
-  booktitle = {Intelligent Robotics and Applications: First International Conference, ICIRA 2008 Wuhan, China, October 15-17, 2008 Proceedings, Part II},
-  year      = {2008},
-  file      = {:li2008.pdf:PDF},
-  groups    = {Crater Detection, Surface Landing},
-  owner     = {shankar},
-  timestamp = {2017.05.19 13:05},
-  url       = {http://dx.doi.org/10.1007/978-3-540-88518-4_119},
+  author     = {Li, Shuang},
+  title      = {Computer Vision Based Autonomous Navigation for Pin-point Landing Robotic Spacecraft on Asteroids},
+  booktitle  = {Intelligent Robotics and Applications: First International Conference, ICIRA 2008 Wuhan, China, October 15-17, 2008 Proceedings, Part II},
+  year       = {2008},
+  file       = {:li2008.pdf:PDF},
+  groups     = {Crater Detection, Surface Landing},
+  keywords   = {read},
+  owner      = {shankar},
+  review     = {* Presents some common vision algorithms + state estimation schemes to detect features from imagery
+* No control aspect is addressed
+* Used MRPs for attitude, pinhole camera model, linearized measurement dynamics for kalman filter
+
+* Crater detection seems to be a solved problem in the field},
+  timestamp  = {2017.05.24 17:05},
+  url        = {http://dx.doi.org/10.1007/978-3-540-88518-4_119},
 }
 
 @InProceedings{johnson2000,
