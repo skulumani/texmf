@@ -14991,20 +14991,26 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
 }
 
 @Article{leroy2001,
-  author    = {B Leroy and G Medioni and E Johnson and L Matthies},
-  title     = {Crater Detection for Autonomous Landing on Asteroids},
-  journal   = {Image and Vision Computing},
-  year      = {2001},
-  volume    = {19},
-  number    = {11},
-  pages     = {787--792},
-  doi       = {10.1016/S0262-8856(00)00111-6},
-  file      = {:leroy2001.pdf:PDF},
-  groups    = {Crater Detection, Surface Landing},
-  keywords  = {feature extraction, autonomous spacecraft},
-  owner     = {shankar},
-  timestamp = {2017.05.19 15:05},
-  url       = {http://www.sciencedirect.com/science/article/pii/S0262885600001116},
+  author     = {B Leroy and G Medioni and E Johnson and L Matthies},
+  title      = {Crater Detection for Autonomous Landing on Asteroids},
+  journal    = {Image and Vision Computing},
+  year       = {2001},
+  volume     = {19},
+  number     = {11},
+  pages      = {787--792},
+  doi        = {10.1016/S0262-8856(00)00111-6},
+  file       = {:leroy2001.pdf:PDF},
+  groups     = {Crater Detection, Surface Landing, Landmark tracking},
+  keywords   = {feature extraction, autonomous spacecraft, read},
+  owner      = {shankar},
+  review     = {* Method to extract craters from imagery
+* Claims improvement/benefits over the hough transform
+* Detected craters are then compared to a priori model of the asteroid
+* Pose is computed by copmaring detected craters with subset of model - this will only output lat/long in asteroid frame
+
+* Some asteroids have no craters so this might not be extendable},
+  timestamp  = {2017.05.23 20:05},
+  url        = {http://www.sciencedirect.com/science/article/pii/S0262885600001116},
 }
 
 @InProceedings{johnson2005,
@@ -15017,7 +15023,7 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
   abstract   = {Future robotic space missions will employ a precision soft-landing capability that will enable exploration of previously inaccessible sites that have strong scientific significance. To enable this capability, a fully autonomous onboard system that identifies and avoids hazardous features such as steep slopes and large rocks is required. Such a system will also provide greater functionality in unstructured terrain to unmanned aerial vehicles. This paper describes an algorithm for landing hazard avoidance based on images from a single moving camera. The core of the algorithm is an efficient application of structure from motion to generate a dense elevation map of the landing area. Hazards are then detected in this map and a safe landing site is selected. The algorithm has been implemented on an autonomous helicopter testbed and demonstrated four times resulting in the first autonomous landing of an unmanned helicopter in unknown and hazardous terrain.},
   doi        = {10.1109/ROBOT.2005.1570727},
   file       = {:johnson2005.pdf:PDF},
-  groups     = {Computer vision},
+  groups     = {Structure from Motion, Feature Based, Computer vision},
   issn       = {1050-4729},
   keywords   = {UAV;autonomous landing;hazard detection;structure from motion;Cameras;Hazards;Helicopters;Laboratories;Propulsion;Space missions;Space technology;Space vehicles;Testing;Unmanned aerial vehicles;UAV;autonomous landing;hazard detection;structure from motion, read, rank5},
   owner      = {shankar},
@@ -15062,7 +15068,7 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
   doi        = {10.1108/00022660510606402},
   eprint     = {http://dx.doi.org/10.1108/00022660510606402},
   file       = {:shuang2005.pdf:PDF},
-  groups     = {Computer vision, Surface Landing},
+  groups     = {Surface Landing, Computer vision},
   keywords   = {landing, asteroid, vision-based landing, read},
   owner      = {shankar},
   review     = {* Autonoumously land on asteroids
@@ -15103,7 +15109,7 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
   abstract   = {The driving precision landing requirement for the Autonomous Landing and Hazard Avoidance Technology project is to autonomously land within 100 m of a predetermined location on the lunar surface. Traditional lunar landing approaches based on inertial sensing do not have the navigational precision to meet this requirement. The purpose of Terrain Relative Navigation (TRN) is to augment inertial navigation by providing position or bearing measurements relative to known surface landmarks. From these measurements, the navigational precision can be reduced to a level that meets the 100 m requirement. There are three different TRN functions: global position estimation, local position estimation and velocity estimation. These functions can be achieved with active range sensing or passive imaging. This paper gives a survey of many TRN approaches and then presents some high fidelity simulation results for contour matching and area correlation approaches to TRN using active sensors. Since TRN requires an a-priori reference map, the paper concludes by describing past and future lunar imaging and digital elevation map data sets available for this purpose.},
   doi        = {10.1109/AERO.2008.4526302},
   file       = {:johnson2008.pdf:PDF},
-  groups     = {Computer vision, Surface Landing},
+  groups     = {Surface Landing, Computer vision},
   issn       = {1095-323X},
   keywords   = {Moon;aircraft landing guidance;inertial navigation;terrain mapping;a priori reference map;active sensors;area correlation;autonomous landing;contour matching;digital elevation map data set;hazard avoidance;inertial navigation;lunar imaging;lunar surface;precise lunar landing;surface landmark;terrain relative navigation;Aircraft navigation;Extraterrestrial measurements;Hazards;Image sensors;Inertial navigation;Land surface;Lighting;Moon;Optical imaging;Position measurement, read, rank5},
   owner      = {shankar},
@@ -15166,7 +15172,7 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
   abstract   = {This paper describes machine vision algorithms that enable precision guidance and hazard avoidance during small body exploration through onboard visual feature tracking and landmark recognition. These algorithms provide estimates of spacecraft relative motion and absolute position used to guide the spacecraft during autonomous landing and exploration. They also enable hazard avoidance by providing estimates of 3-D surface topography through processing of monocular image streams. This form of onboard autonomy is a critical enabling technology for multiple future missions including Comet Nucleus Sample Return, Large Asteroid Sample Return, Titan Organics Explorer and Europa Lander and Mars lander missions},
   doi        = {10.1109/AERO.2000.879333},
   file       = {:johnson2000.pdf:PDF},
-  groups     = {Computer vision, Surface Landing},
+  groups     = {Surface Landing, Computer vision},
   issn       = {1095-323X},
   keywords   = {aerospace control;computer vision;computerised navigation;feature extraction;motion estimation;space research;stereo image processing;3D surface topography;Comet Nucleus Sample Return;Europa Lander;Large Asteroid Sample Return;Mars lander missions;Titan Organics Explorer;absolute position;autonomous small body navigation;critical enabling technology;hazard avoidance;landmark recognition;monocular image streams;multiple future missions;onboard autonomy;onboard visual feature tracking;precision guidance;small body exploration;spacecraft relative motion;Cameras;Hazards;Machine vision;Moon;Motion estimation;Navigation;Optical sensors;Space vehicles;Streaming media;Surface topography, read},
   owner      = {shankar},
@@ -15201,10 +15207,10 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
   abstract  = {We address the problem of obtaining dense surface information from a sparse set of 3D data in the presence of spurious noise samples. The input can be in the form of points, or points with an associated tangent or normal, allowing both position and direction to be corrupted by noise. Most approaches treat the problem as an interpolation problem, which is solved by fitting a surface such as a membrane or thin plate to minimize some function. We argue that these physical constraints are not sufficient, and propose to impose additional perceptual constraints such as good continuity and “cosurfacity”. These constraints allow us to not only infer surfaces, but also to detect surface orientation discontinuities, as well as junctions, all at the same time. The approach imposes no restriction on genus, number of discontinuities, number of objects, and is noniterative. The result is in the form of three dense saliency maps for surfaces, intersections between surfaces (i.e., 3D curves), and 3D junctions, respectively. These saliency maps are then used to guide a “marching” process to generate a description (e.g., a triangulated mesh) making information about surfaces, space curves, and 3D junctions explicit. The traditional marching process needs to be refined as the polarity of the surface orientation is not necessarily locally consistent. These three maps are currently not integrated, and this is the topic of our ongoing research. We present results on a variety of computer-generated and real data, having varying curvature, of different genus, and multiple objects},
   doi       = {10.1109/34.632985},
   file      = {:guy1997.pdf:PDF},
-  groups    = {Crater Detection, Computer vision, Surface Landing},
+  groups    = {Crater Detection,Computer vision},
   keywords  = {feature extraction;image segmentation;noise;3D curve inference;3D junctions;continuity;cosurfacity;dense saliency maps;dense surface information;junction inference;space curves;sparse noisy 3D data;surface inference;surface intersections;surface orientation discontinuities;triangulated mesh;Biomembranes;Humans;Intelligent robots;Interpolation;Layout;Mesh generation;Shape;Surface fitting;Surface reconstruction;Surface treatment},
   owner     = {shankar},
-  timestamp = {2017.05.19 13:05},
+  timestamp = {2017.05.23 20:05},
 }
 
 @Article{ho1995,
@@ -15216,7 +15222,7 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
   number    = {1},
   pages     = {117--124},
   file      = {:ho1995.pdf:PDF},
-  groups    = {Computer vision, Surface Landing},
+  groups    = {Surface Landing, Computer vision},
   owner     = {shankar},
   publisher = {Elsevier},
   timestamp = {2017.05.19 13:05},
@@ -15404,11 +15410,12 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
 2 ExplicitGroup:No attitude\;1\;;
 2 ExplicitGroup:SMC\;1\;;
 1 ExplicitGroup:Surface Landing\;2\;;
-2 ExplicitGroup:Computer vision\;1\;;
+2 ExplicitGroup:Computer vision\;2\;;
 2 ExplicitGroup:Crater Detection\;1\;;
 2 ExplicitGroup:Feature Based\;1\;;
 2 ExplicitGroup:Landmark tracking\;1\;;
 2 ExplicitGroup:Structure from Motion\;2\;;
+2 ExplicitGroup:Operational Missions\;2\;;
 }
 
 @Comment{jabref-meta: saveActions:enabled;
