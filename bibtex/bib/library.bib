@@ -753,7 +753,12 @@
   date-added    = {2016-09-28 00:36:43 +0000},
   date-modified = {2016-09-28 00:37:18 +0000},
   file          = {szeliski2010.pdf:szeliski2010.pdf:PDF},
-  groups        = {Crater Detection},
+  groups        = {Computer vision},
+  keywords      = {skimmed},
+  review        = {* Read the first two chapters
+* Should try and implement the exercises
+* Lots of good references},
+  timestamp     = {2017.05.24 17:05},
 }
 
 @Article{makel2016,
@@ -14842,7 +14847,7 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
   abstract  = {An autonomous rendezvous guidance scheme for spacecraft to descend to small celestial bodies by using optical information is presented. First, a new guidance, navigation, and control (GNC) method based on fixation-point (FP) inheritance is proposed. A spacecraft can safely descend toward the target point on the celestial body by tracking and autonomously renewing the FPs on the surface. Next, we deal with the method of extracting the FPs. A spatial band-pass filter (BPF) is applied to pictures taken to enhance features having comparable size with the tracking window. Local variance of the filtered image is used as a criterion of the extraction. Then, the relative information between the spacecraft and the celestial body (position, velocity, attitude, etc.) is calculated from the image coordinates and the range measurements of the FPs from the spacecraft. To suppress observation noise and improve navigation accuracy, an application of the extended Kalman filter is also presented. Finally, simulations are conducted to verify the guidance precision and the fuel consumption of the proposed guidance scheme},
   doi       = {10.1109/7.766929},
   file      = {:miso1999.pdf:PDF},
-  groups    = {Crater Detection, Surface Landing},
+  groups    = {Surface Landing, Hazard detection},
   keywords  = {Kalman filters;aerospace robotics;attitude control;feature extraction;laser ranging;navigation;optical control;optical tracking;optimal control;position control;robot vision;space vehicles;telerobotics;tracking filters;MUSES-C asteroid sample return mission;autonomous landing;autonomous rendezvous guidance scheme;extended Kalman filter;feature based method;fixation-point inheritance;fuel consumption;guidance navigation and control method;guidance precision;image coordinates;laser range finder;least-square block matching;navigation accuracy;optical guidance;quasi-optimal control logic;range measurements;relative attitude;relative position;small celestial bodies;spacecraft;spatial band-pass filter;template extraction;thruster-control strategy;tracking window;Band pass filters;Coordinate measuring machines;Data mining;Fuels;Navigation;Optical filters;Position measurement;Space vehicles;Target tracking;Velocity measurement},
   owner     = {shankar},
   timestamp = {2017.05.18 10:05},
@@ -14882,7 +14887,7 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
   abstract  = {In this paper, we present the vision-aided inertial navigation (VISINAV) algorithm that enables precision planetary landing. The vision front-end of the VISINAV system extracts 2-D-to-3-D correspondences between descent images and a surface map (mapped landmarks), as well as 2-D-to-2-D feature tracks through a sequence of descent images (opportunistic features). An extended Kalman filter (EKF) tightly integrates both types of visual feature observations with measurements from an inertial measurement unit. The filter computes accurate estimates of the lander's terrain-relative position, attitude, and velocity, in a resource-adaptive and hence real-time capable fashion. In addition to the technical analysis of the algorithm, the paper presents validation results from a sounding-rocket test flight, showing estimation errors of only 0.16 m/s for velocity and 6.4 m for position at touchdown. These results vastly improve current state of the art for terminal descent navigation without visual updates, and meet the requirements of future planetary exploration missions.},
   doi       = {10.1109/TRO.2009.2012342},
   file      = {:mourikis2009.pdf:PDF},
-  groups    = {Crater Detection, Surface Landing},
+  groups    = {Surface Landing, Hazard detection},
   keywords  = {Kalman filters;aerospace robotics;aircraft navigation;image sequences;inertial navigation;path planning;robot vision;descent images sequence;estimation errors;extended Kalman filter;inertial measurement unit;planetary exploration missions;precision planetary landing;spacecraft descent;spacecraft entry;spacecraft landing;vision-aided inertial navigation;Descent and landing (EDL);entry;localization;sensor fusion;space robotics;vision-aided inertial navigation},
   owner     = {shankar},
   timestamp = {2017.05.18 10:05},
@@ -15000,7 +15005,7 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
   pages      = {787--792},
   doi        = {10.1016/S0262-8856(00)00111-6},
   file       = {:leroy2001.pdf:PDF},
-  groups     = {Crater Detection, Surface Landing, Landmark tracking},
+  groups     = {Surface Landing, Landmark tracking, Hazard detection},
   keywords   = {feature extraction, autonomous spacecraft, read},
   owner      = {shankar},
   review     = {* Method to extract craters from imagery
@@ -15157,7 +15162,7 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
   issn       = {0094-5765},
   doi        = {10.1016/j.actaastro.2007.01.030},
   file       = {:rogata2007.pdf:PDF},
-  groups     = {Crater Detection, Surface Landing, Computer vision},
+  groups     = {Surface Landing, Computer vision, Hazard detection},
   keywords   = {read},
   owner      = {shankar},
   review     = {* Provides a more closed-loop approach to asteroid landing
@@ -15173,7 +15178,7 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
   booktitle  = {Intelligent Robotics and Applications: First International Conference, ICIRA 2008 Wuhan, China, October 15-17, 2008 Proceedings, Part II},
   year       = {2008},
   file       = {:li2008.pdf:PDF},
-  groups     = {Crater Detection, Surface Landing},
+  groups     = {Surface Landing, Hazard detection},
   keywords   = {read},
   owner      = {shankar},
   review     = {* Presents some common vision algorithms + state estimation schemes to detect features from imagery
@@ -15230,7 +15235,7 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
   abstract  = {We address the problem of obtaining dense surface information from a sparse set of 3D data in the presence of spurious noise samples. The input can be in the form of points, or points with an associated tangent or normal, allowing both position and direction to be corrupted by noise. Most approaches treat the problem as an interpolation problem, which is solved by fitting a surface such as a membrane or thin plate to minimize some function. We argue that these physical constraints are not sufficient, and propose to impose additional perceptual constraints such as good continuity and “cosurfacity”. These constraints allow us to not only infer surfaces, but also to detect surface orientation discontinuities, as well as junctions, all at the same time. The approach imposes no restriction on genus, number of discontinuities, number of objects, and is noniterative. The result is in the form of three dense saliency maps for surfaces, intersections between surfaces (i.e., 3D curves), and 3D junctions, respectively. These saliency maps are then used to guide a “marching” process to generate a description (e.g., a triangulated mesh) making information about surfaces, space curves, and 3D junctions explicit. The traditional marching process needs to be refined as the polarity of the surface orientation is not necessarily locally consistent. These three maps are currently not integrated, and this is the topic of our ongoing research. We present results on a variety of computer-generated and real data, having varying curvature, of different genus, and multiple objects},
   doi       = {10.1109/34.632985},
   file      = {:guy1997.pdf:PDF},
-  groups    = {Crater Detection,Computer vision},
+  groups    = {Computer vision, Hazard detection},
   keywords  = {feature extraction;image segmentation;noise;3D curve inference;3D junctions;continuity;cosurfacity;dense saliency maps;dense surface information;junction inference;space curves;sparse noisy 3D data;surface inference;surface intersections;surface orientation discontinuities;triangulated mesh;Biomembranes;Humans;Intelligent robots;Interpolation;Layout;Mesh generation;Shape;Surface fitting;Surface reconstruction;Surface treatment},
   owner     = {shankar},
   timestamp = {2017.05.23 20:05},
@@ -15263,20 +15268,23 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
 }
 
 @InProceedings{benedetti1998,
-  author    = {A. Benedetti and P. Perona},
-  title     = {Real-time 2-D feature detection on a reconfigurable computer},
-  booktitle = {Proceedings. 1998 IEEE Computer Society Conference on Computer Vision and Pattern Recognition (Cat. No.98CB36231)},
-  year      = {1998},
-  pages     = {586--593},
-  month     = jun,
-  abstract  = {We have designed and implemented a system for real-time detection of 2-D features on a reconfigurable computer based on Field Programmable Gate Arrays (FPGA's). We envision this device as the front-end of a system able to track image features in real-time control applications like autonomous vehicle navigation. The algorithm employed to select good features is inspired by Tomasi and Kanade's method. Compared to the original method, the algorithm that we have devised does not require any floating point or transcendental operations, and can be implemented either in hardware or in software. Moreover, it maps efficiently into a highly pipelined architecture, well suited to implementation in FPGA technology. We have implemented the algorithm on a low-cost reconfigurable computer and have observed reliable operation on an image stream generated by a standard NTSC video camera at 30 Hz},
-  doi       = {10.1109/CVPR.1998.698665},
-  file      = {:benedetti1998.pdf:PDF},
-  groups    = {Feature Based},
-  issn      = {1063-6919},
-  keywords  = {feature extraction;pipeline processing;real-time systems;reconfigurable architectures;FPGA technology;Field Programmable Gate Arrays;NTSC video camera;feature detection;highly pipelined architecture;reconfigurable computer;Application software;Computer vision;Control systems;Field programmable gate arrays;Hardware;Mobile robots;Navigation;Real time systems;Remotely operated vehicles;Software algorithms},
-  owner     = {shankar},
-  timestamp = {2017.05.23 17:05},
+  author     = {A. Benedetti and P. Perona},
+  title      = {Real-time 2-D feature detection on a reconfigurable computer},
+  booktitle  = {Proceedings. 1998 IEEE Computer Society Conference on Computer Vision and Pattern Recognition (Cat. No.98CB36231)},
+  year       = {1998},
+  pages      = {586--593},
+  month      = jun,
+  abstract   = {We have designed and implemented a system for real-time detection of 2-D features on a reconfigurable computer based on Field Programmable Gate Arrays (FPGA's). We envision this device as the front-end of a system able to track image features in real-time control applications like autonomous vehicle navigation. The algorithm employed to select good features is inspired by Tomasi and Kanade's method. Compared to the original method, the algorithm that we have devised does not require any floating point or transcendental operations, and can be implemented either in hardware or in software. Moreover, it maps efficiently into a highly pipelined architecture, well suited to implementation in FPGA technology. We have implemented the algorithm on a low-cost reconfigurable computer and have observed reliable operation on an image stream generated by a standard NTSC video camera at 30 Hz},
+  doi        = {10.1109/CVPR.1998.698665},
+  file       = {:benedetti1998.pdf:PDF},
+  groups     = {Feature Based},
+  issn       = {1063-6919},
+  keywords   = {feature extraction;pipeline processing;real-time systems;reconfigurable architectures;FPGA technology;Field Programmable Gate Arrays;NTSC video camera;feature detection;highly pipelined architecture;reconfigurable computer;Application software;Computer vision;Control systems;Field programmable gate arrays;Hardware;Mobile robots;Navigation;Real time systems;Remotely operated vehicles;Software algorithms, read},
+  owner      = {shankar},
+  review     = {* Fast algorithm implemented on FPGA for feature detection
+* This modifies a standard algorithm to avoid transcendental equations (square root)
+* Seems to offer enough performance that another paper I read recently also uses it},
+  timestamp  = {2017.05.24 17:05},
 }
 
 @Article{blum1973,
@@ -15310,10 +15318,19 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
   comment       = {doi: 10.2514/2.4988},
   doi           = {10.2514/2.4988},
   file          = {:johnson2002a.pdf:PDF},
-  groups        = {Surface Landing},
+  groups        = {Surface Landing, Hazard detection},
+  keywords      = {read},
   owner         = {shankar},
   publisher     = {American Institute of Aeronautics and Astronautics},
-  timestamp     = {2017.05.23 17:05},
+  review        = {* Simulation of using LIDAR to generate a terrain map and find a safe landing site
+* LIDAR is deeply modelled and simulated
+* Synthetic terrain generation is used for Mars
+* Polynomial fitting is used to generate a trajectory to the determined landing site
+  * Trajectory is composed of an approach and landing phase. 
+  Horizontal velocity is killed in approach phase and ending about 10 m above target site.
+  Constant acceleration descent until touchdown - vertical landing
+* Terrain map is used to determine surface slope/roughness},
+  timestamp     = {2017.05.24 17:05},
   url           = {http://dx.doi.org/10.2514/2.4988},
 }
 
@@ -15329,40 +15346,48 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
 }
 
 @InProceedings{nister2004,
-  author    = {D. Nister and O. Naroditsky and J. Bergen},
-  title     = {Visual odometry},
-  booktitle = {Proceedings of the 2004 IEEE Computer Society Conference on Computer Vision and Pattern Recognition, 2004. CVPR 2004.},
-  year      = {2004},
-  volume    = {1},
-  pages     = {I-652-I-659 Vol.1},
-  month     = jun,
-  abstract  = {We present a system that estimates the motion of a stereo head or a single moving camera based on video input. The system operates in real-time with low delay and the motion estimates are used for navigational purposes. The front end of the system is a feature tracker. Point features are matched between pairs of frames and linked into image trajectories at video rate. Robust estimates of the camera motion are then produced from the feature tracks using a geometric hypothesize-and-test architecture. This generates what we call visual odometry, i.e. motion estimates from visual input alone. No prior knowledge of the scene nor the motion is necessary. The visual odometry can also be used in conjunction with information from other sources such as GPS, inertia sensors, wheel encoders, etc. The pose estimation method has been applied successfully to video from aerial, automotive and handheld platforms. We focus on results with an autonomous ground vehicle. We give examples of camera trajectories estimated purely from images over previously unseen distances and periods of time.},
-  doi       = {10.1109/CVPR.2004.1315094},
-  file      = {:nister2004.pdf:PDF},
-  groups    = {Structure from Motion},
-  issn      = {1063-6919},
-  keywords  = {image matching;motion estimation;navigation;vehicles;video cameras;video signal processing;aerial platforms;automotive platforms;autonomous ground vehicle;camera motion;camera trajectories;feature tracker;geometric hypothesize-and-test architecture;global positioning system;handheld platforms;image trajectories;inertial navigation;motion estimation;pose estimation method;robust estimation;single moving camera;stereo head;video rate;visual odometry;Cameras;Delay estimation;Global Positioning System;Head;Layout;Motion estimation;Navigation;Real time systems;Robustness;Tracking},
-  owner     = {shankar},
-  timestamp = {2017.05.23 17:05},
+  author     = {D. Nister and O. Naroditsky and J. Bergen},
+  title      = {Visual odometry},
+  booktitle  = {Proceedings of the 2004 IEEE Computer Society Conference on Computer Vision and Pattern Recognition, 2004. CVPR 2004.},
+  year       = {2004},
+  volume     = {1},
+  pages      = {I-652-I-659 Vol.1},
+  month      = jun,
+  abstract   = {We present a system that estimates the motion of a stereo head or a single moving camera based on video input. The system operates in real-time with low delay and the motion estimates are used for navigational purposes. The front end of the system is a feature tracker. Point features are matched between pairs of frames and linked into image trajectories at video rate. Robust estimates of the camera motion are then produced from the feature tracks using a geometric hypothesize-and-test architecture. This generates what we call visual odometry, i.e. motion estimates from visual input alone. No prior knowledge of the scene nor the motion is necessary. The visual odometry can also be used in conjunction with information from other sources such as GPS, inertia sensors, wheel encoders, etc. The pose estimation method has been applied successfully to video from aerial, automotive and handheld platforms. We focus on results with an autonomous ground vehicle. We give examples of camera trajectories estimated purely from images over previously unseen distances and periods of time.},
+  doi        = {10.1109/CVPR.2004.1315094},
+  file       = {:nister2004.pdf:PDF},
+  groups     = {Structure from Motion, Computer vision},
+  issn       = {1063-6919},
+  keywords   = {image matching;motion estimation;navigation;vehicles;video cameras;video signal processing;aerial platforms;automotive platforms;autonomous ground vehicle;camera motion;camera trajectories;feature tracker;geometric hypothesize-and-test architecture;global positioning system;handheld platforms;image trajectories;inertial navigation;motion estimation;pose estimation method;robust estimation;single moving camera;stereo head;video rate;visual odometry;Cameras;Delay estimation;Global Positioning System;Head;Layout;Motion estimation;Navigation;Real time systems;Robustness;Tracking, read},
+  owner      = {shankar},
+  review     = {* Visual odometry to estimate motion over time
+* Track features between images
+* No a priori knowledge required
+* Seems to implement already well-known methods
+* Will need some version of this in my work},
+  timestamp  = {2017.05.24 17:05},
 }
 
 @InProceedings{oliensis2002,
-  author    = {J. Oliensis},
-  title     = {Exact two-image structure from motion},
-  year      = {2002},
-  volume    = {24},
-  number    = {12},
-  pages     = {1618--1633},
-  month     = dec,
-  abstract  = {For two-image structure from motion, we present a simple, exact expression for a least-squares image-reprojection error for finite motion that depends only on the motion. Optimal estimates of the structure and motion can be computed by minimizing this expression just over the motion parameters. Also, we present a solution to the triangulation problem: an exact, explicit expression for the optimal structure estimate given the motion. We identify a new ambiguity in recovering the structure for known motion. We study the exact error's properties experimentally and demonstrate that it often has several local minima for forward or backward motion estimates. Our experiments also show that the "reflected" local minimum of Oliensis (2001) and Soatto et al. (1998) occurs for large translational motions. Our exact results assume that the camera is calibrated and use a least-squares image-reprojection error that applies most naturally to a spherical imaging surface. We approximately extend our approach to the standard least-squares error in the image plane and uncalibrated cameras. We present an improved version of the Sampson error which gives better results experimentally.},
-  doi       = {10.1109/TPAMI.2002.1114853},
-  file      = {:oliensis2002.pdf:PDF},
-  groups    = {Structure from Motion},
-  issn      = {0162-8828},
-  journal   = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
-  keywords  = {cameras;computer vision;least squares approximations;motion estimation;Sampson error;camera;experiment;finite motion;least-squares image-reprojection error;local minima;motion estimation;spherical imaging surface;triangulation problem;two-image structure from motion;Cameras;Layout;Motion estimation;Optical wavelength conversion;Retina;Robustness},
-  owner     = {shankar},
-  timestamp = {2017.05.23 17:05},
+  author     = {J. Oliensis},
+  title      = {Exact two-image structure from motion},
+  year       = {2002},
+  volume     = {24},
+  number     = {12},
+  pages      = {1618--1633},
+  month      = dec,
+  abstract   = {For two-image structure from motion, we present a simple, exact expression for a least-squares image-reprojection error for finite motion that depends only on the motion. Optimal estimates of the structure and motion can be computed by minimizing this expression just over the motion parameters. Also, we present a solution to the triangulation problem: an exact, explicit expression for the optimal structure estimate given the motion. We identify a new ambiguity in recovering the structure for known motion. We study the exact error's properties experimentally and demonstrate that it often has several local minima for forward or backward motion estimates. Our experiments also show that the "reflected" local minimum of Oliensis (2001) and Soatto et al. (1998) occurs for large translational motions. Our exact results assume that the camera is calibrated and use a least-squares image-reprojection error that applies most naturally to a spherical imaging surface. We approximately extend our approach to the standard least-squares error in the image plane and uncalibrated cameras. We present an improved version of the Sampson error which gives better results experimentally.},
+  doi        = {10.1109/TPAMI.2002.1114853},
+  file       = {:oliensis2002.pdf:PDF},
+  groups     = {Structure from Motion, Computer vision},
+  issn       = {0162-8828},
+  journal    = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  keywords   = {cameras;computer vision;least squares approximations;motion estimation;Sampson error;camera;experiment;finite motion;least-squares image-reprojection error;local minima;motion estimation;spherical imaging surface;triangulation problem;two-image structure from motion;Cameras;Layout;Motion estimation;Optical wavelength conversion;Retina;Robustness, skimmed},
+  owner      = {shankar},
+  review     = {* Very detailed derivation and math background/proofs
+* Derives a better method to perform structure from motion
+* Cites some data sets for vision estimation which might be useful},
+  timestamp  = {2017.05.24 17:05},
 }
 
 @InProceedings{roumeliotis2002,
@@ -15434,7 +15459,7 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
 2 ExplicitGroup:SMC\;1\;;
 1 ExplicitGroup:Surface Landing\;2\;;
 2 ExplicitGroup:Computer vision\;2\;;
-2 ExplicitGroup:Crater Detection\;1\;;
+2 ExplicitGroup:Hazard detection\;2\;;
 2 ExplicitGroup:Feature Based\;1\;;
 2 ExplicitGroup:Landmark tracking\;1\;;
 2 ExplicitGroup:Structure from Motion\;2\;;
