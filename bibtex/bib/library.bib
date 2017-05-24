@@ -15008,20 +15008,28 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
 }
 
 @InProceedings{johnson2005,
-  author    = {A. Johnson and J. Montgomery and L. Matthies},
-  title     = {Vision Guided Landing of an Autonomous Helicopter in Hazardous Terrain},
-  booktitle = {Proceedings of the 2005 IEEE International Conference on Robotics and Automation},
-  year      = {2005},
-  pages     = {3966--3971},
-  month     = apr,
-  abstract  = {Future robotic space missions will employ a precision soft-landing capability that will enable exploration of previously inaccessible sites that have strong scientific significance. To enable this capability, a fully autonomous onboard system that identifies and avoids hazardous features such as steep slopes and large rocks is required. Such a system will also provide greater functionality in unstructured terrain to unmanned aerial vehicles. This paper describes an algorithm for landing hazard avoidance based on images from a single moving camera. The core of the algorithm is an efficient application of structure from motion to generate a dense elevation map of the landing area. Hazards are then detected in this map and a safe landing site is selected. The algorithm has been implemented on an autonomous helicopter testbed and demonstrated four times resulting in the first autonomous landing of an unmanned helicopter in unknown and hazardous terrain.},
-  doi       = {10.1109/ROBOT.2005.1570727},
-  file      = {:johnson2005.pdf:PDF},
-  groups    = {Computer vision},
-  issn      = {1050-4729},
-  keywords  = {UAV;autonomous landing;hazard detection;structure from motion;Cameras;Hazards;Helicopters;Laboratories;Propulsion;Space missions;Space technology;Space vehicles;Testing;Unmanned aerial vehicles;UAV;autonomous landing;hazard detection;structure from motion},
-  owner     = {shankar},
-  timestamp = {2017.05.19 12:05},
+  author     = {A. Johnson and J. Montgomery and L. Matthies},
+  title      = {Vision Guided Landing of an Autonomous Helicopter in Hazardous Terrain},
+  booktitle  = {Proceedings of the 2005 IEEE International Conference on Robotics and Automation},
+  year       = {2005},
+  pages      = {3966--3971},
+  month      = apr,
+  abstract   = {Future robotic space missions will employ a precision soft-landing capability that will enable exploration of previously inaccessible sites that have strong scientific significance. To enable this capability, a fully autonomous onboard system that identifies and avoids hazardous features such as steep slopes and large rocks is required. Such a system will also provide greater functionality in unstructured terrain to unmanned aerial vehicles. This paper describes an algorithm for landing hazard avoidance based on images from a single moving camera. The core of the algorithm is an efficient application of structure from motion to generate a dense elevation map of the landing area. Hazards are then detected in this map and a safe landing site is selected. The algorithm has been implemented on an autonomous helicopter testbed and demonstrated four times resulting in the first autonomous landing of an unmanned helicopter in unknown and hazardous terrain.},
+  doi        = {10.1109/ROBOT.2005.1570727},
+  file       = {:johnson2005.pdf:PDF},
+  groups     = {Computer vision},
+  issn       = {1050-4729},
+  keywords   = {UAV;autonomous landing;hazard detection;structure from motion;Cameras;Hazards;Helicopters;Laboratories;Propulsion;Space missions;Space technology;Space vehicles;Testing;Unmanned aerial vehicles;UAV;autonomous landing;hazard detection;structure from motion, read, rank5},
+  owner      = {shankar},
+  review     = {* Good paper and results
+* Autonomous landing of a helicopter using a single camera, altimeter, initial gps and attitude information
+* Also generates a terrain map to find and avoid high slope and rough landing areas
+* Method is not applicable for motions with large rotations or very fast descents
+* This approach uses structure from motion which extracts features to estimate motion and generate a terrain map
+* Knowledge of absolute position/attitude is required to transform into surface fixed frame and derive the terrain map
+* Algorithm is very fast even on a slow processor
+* There are many good references},
+  timestamp  = {2017.05.23 20:05},
 }
 
 @Article{garcia-pardo2002,
@@ -15269,7 +15277,7 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
   pages         = {1091--1099},
   month         = nov,
   issn          = {0731-5090},
-  __markedentry = {[shankar:6]},
+  __markedentry = {[shankar:]},
   comment       = {doi: 10.2514/2.4988},
   doi           = {10.2514/2.4988},
   file          = {:johnson2002a.pdf:PDF},
