@@ -15116,7 +15116,7 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
   booktitle  = {Proceedings of the International Symposium on Artifical Intelligence, Robotics and Automation in Space},
   year       = {2010},
   file       = {:cocaud2010.pdf:PDF},
-  groups     = {Surface Landing},
+  groups     = {Surface Landing, Landmark tracking},
   keywords   = {read},
   owner      = {shankar},
   review     = {* Only shows the SLAM algorithm
@@ -15493,6 +15493,37 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
   review     = {* Laser range finder used primarly for shape/body determination
 * Measures time of flight of a pulse to return to detector},
   timestamp  = {2017.06.08 15:06},
+}
+
+@InProceedings{cocaud2012,
+  author     = {Cocaud, Cedric and Kubota, Takashi},
+  title      = {Autonomous navigation near asteroids based on visual SLAM},
+  booktitle  = {Proceedings of the 23\textsuperscript{rd} International Symposium on Space Flight Dynamics, Pasadena, California},
+  year       = {2012},
+  file       = {:cocaud2012.pdf:PDF},
+  groups     = {Surface Landing},
+  keywords   = {read},
+  owner      = {shankar},
+  review     = {* Uses a particle filter for pose estimation
+* Octotree occupancy grid mapping used to build a map of the asteroid. And surface features are stored in the database
+* Monocular structure from motion, laser range finder, and imu are used as sensors into the estimation scheme},
+  timestamp  = {2017.06.09 11:06},
+}
+
+@InProceedings{jiangeng2013,
+  author    = {L. Jiangeng and Z. Rong and W. Ruoyan and Z. Yu},
+  title     = {An asteroid landing location algorithm based on image feature},
+  booktitle = {2013 25\textsuperscript{th} Chinese Control and Decision Conference (CCDC)},
+  year      = {2013},
+  pages     = {951--956},
+  month     = may,
+  abstract  = {Optical navigation technology is widely used in precision guidance for autonomous landing and hazard avoidance. According to the requirements of the computer vision landing location system on a planetary lander, this paper proposed an algorithm to automatically obtain the precise landing position, which is based on optical image features. The main contents of this paper are as follows: Firstly, an integrated corner detection algorithm is firstly applied to detect the interest corners on asteroid images, which performs quite well compared with other feature extraction methods in many aspects; Secondly, the paper introduces a mutual matching method based on moment invariant and regional feature mutual information; Finally, the landing position can be established by calculating the vectors between the goal landing point and the feature points obtained on the base image and correctly matching the feature point pairs on the base image with images captured by CCD camera in real time when landing on the asteroid. The simulated experiments have been conducted using Eros Asteroid images. The results show that the algorithm can achieve high matching accuracy and is qualified for engineering application.},
+  doi       = {10.1109/CCDC.2013.6561060},
+  file      = {:jiangeng2013.pdf:PDF},
+  issn      = {1948-9439},
+  keywords  = {CCD image sensors;aerospace computing;computer vision;feature extraction;image matching;object detection;space vehicles;CCD camera;Eros asteroid image;asteroid image;asteroid landing location algorithm;charge coupled device camera;computer vision;feature extraction method;hazard avoidance;integrated corner detection algorithm;moment invariant;mutual matching method;optical image feature;optical navigation technology;planetary lander;regional feature mutual information;Decision support systems;corner detection;feature matching;regional mutual information and precision landing},
+  owner     = {shankar},
+  timestamp = {2017.06.09 13:06},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
