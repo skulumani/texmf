@@ -4069,6 +4069,7 @@ Presents a sliding mode controller for rendezvous with a celestial object
   date-added    = {2015-10-07 00:16:40 +0000},
   date-modified = {2015-10-07 00:16:46 +0000},
   file          = {miller2002.pdf:miller2002.pdf:PDF},
+  groups        = {Surface Landing},
   keywords      = {read},
   publisher     = {Elsevier},
   review        = {* Orbit determination used doppler and range tracking from ground in addition to optical and radiometric data from spacecraft
@@ -15511,19 +15512,66 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
 }
 
 @InProceedings{jiangeng2013,
-  author    = {L. Jiangeng and Z. Rong and W. Ruoyan and Z. Yu},
-  title     = {An asteroid landing location algorithm based on image feature},
-  booktitle = {2013 25\textsuperscript{th} Chinese Control and Decision Conference (CCDC)},
-  year      = {2013},
-  pages     = {951--956},
-  month     = may,
-  abstract  = {Optical navigation technology is widely used in precision guidance for autonomous landing and hazard avoidance. According to the requirements of the computer vision landing location system on a planetary lander, this paper proposed an algorithm to automatically obtain the precise landing position, which is based on optical image features. The main contents of this paper are as follows: Firstly, an integrated corner detection algorithm is firstly applied to detect the interest corners on asteroid images, which performs quite well compared with other feature extraction methods in many aspects; Secondly, the paper introduces a mutual matching method based on moment invariant and regional feature mutual information; Finally, the landing position can be established by calculating the vectors between the goal landing point and the feature points obtained on the base image and correctly matching the feature point pairs on the base image with images captured by CCD camera in real time when landing on the asteroid. The simulated experiments have been conducted using Eros Asteroid images. The results show that the algorithm can achieve high matching accuracy and is qualified for engineering application.},
-  doi       = {10.1109/CCDC.2013.6561060},
-  file      = {:jiangeng2013.pdf:PDF},
-  issn      = {1948-9439},
-  keywords  = {CCD image sensors;aerospace computing;computer vision;feature extraction;image matching;object detection;space vehicles;CCD camera;Eros asteroid image;asteroid image;asteroid landing location algorithm;charge coupled device camera;computer vision;feature extraction method;hazard avoidance;integrated corner detection algorithm;moment invariant;mutual matching method;optical image feature;optical navigation technology;planetary lander;regional feature mutual information;Decision support systems;corner detection;feature matching;regional mutual information and precision landing},
+  author     = {L. Jiangeng and Z. Rong and W. Ruoyan and Z. Yu},
+  title      = {An asteroid landing location algorithm based on image feature},
+  booktitle  = {2013 25\textsuperscript{th} Chinese Control and Decision Conference (CCDC)},
+  year       = {2013},
+  pages      = {951--956},
+  month      = may,
+  abstract   = {Optical navigation technology is widely used in precision guidance for autonomous landing and hazard avoidance. According to the requirements of the computer vision landing location system on a planetary lander, this paper proposed an algorithm to automatically obtain the precise landing position, which is based on optical image features. The main contents of this paper are as follows: Firstly, an integrated corner detection algorithm is firstly applied to detect the interest corners on asteroid images, which performs quite well compared with other feature extraction methods in many aspects; Secondly, the paper introduces a mutual matching method based on moment invariant and regional feature mutual information; Finally, the landing position can be established by calculating the vectors between the goal landing point and the feature points obtained on the base image and correctly matching the feature point pairs on the base image with images captured by CCD camera in real time when landing on the asteroid. The simulated experiments have been conducted using Eros Asteroid images. The results show that the algorithm can achieve high matching accuracy and is qualified for engineering application.},
+  doi        = {10.1109/CCDC.2013.6561060},
+  file       = {:jiangeng2013.pdf:PDF},
+  groups     = {Surface Landing, Feature Based},
+  issn       = {1948-9439},
+  keywords   = {CCD image sensors;aerospace computing;computer vision;feature extraction;image matching;object detection;space vehicles;CCD camera;Eros asteroid image;asteroid image;asteroid landing location algorithm;charge coupled device camera;computer vision;feature extraction method;hazard avoidance;integrated corner detection algorithm;moment invariant;mutual matching method;optical image feature;optical navigation technology;planetary lander;regional feature mutual information;Decision support systems;corner detection;feature matching;regional mutual information and precision landing, skimmed},
+  owner      = {shankar},
+  review     = {* Mostly focused on an method to improve the feature detection/extraction from imagery
+* Compare the estimated location from the imagery to some known landing site},
+  timestamp  = {2017.06.09 13:06},
+}
+
+@InProceedings{bhaskaran2012,
+  author    = {Bhaskaran, Shyam},
+  title     = {Autonomous Navigation for Deep Space Missions},
+  booktitle = {SpaceOps 2012 Conference},
+  year      = {2012},
+  publisher = {American Institute of Aeronautics and Astronautics},
+  file      = {:bhaskaran2012.pdf:PDF},
   owner     = {shankar},
+  review    = {* Perform navigation on board(OD, and then course corrections) by using vision cameras and generating line of sight vectors
+* When far from the body - can use centroiding, but when close the system must correlate landmarks in the image. This requires a map to be known ahead of time
+* Image processing is modified from far field (body is a few pixels), to an extended blob, then to landmark tracking when close to the body. 
+  * The end goal is to output LOS vectors to the body which is then used in the OD process. 
+  * A detailed shape/albedo model is required before attempting to use landmark tracking},
   timestamp = {2017.06.09 13:06},
+}
+
+@Book{thrun2005,
+  title     = {Probabilistic robotics},
+  publisher = {MIT press},
+  year      = {2005},
+  author    = {Thrun, Sebastian and Burgard, Wolfram and Fox, Dieter},
+  file      = {:thrun2005.pdf:PDF;:thrun2005b.pdf:PDF},
+  owner     = {shankar},
+  timestamp = {2017.06.09 14:06},
+}
+
+@Article{cadena2016,
+  author    = {C. Cadena and L. Carlone and H. Carrillo and Y. Latif and D. Scaramuzza and J. Neira and I. Reid and J. J. Leonard},
+  title     = {Past, Present, and Future of Simultaneous Localization and Mapping: Toward the Robust-Perception Age},
+  journal   = {IEEE Transactions on Robotics},
+  year      = {2016},
+  volume    = {32},
+  number    = {6},
+  pages     = {1309--1332},
+  month     = dec,
+  issn      = {1552-3098},
+  abstract  = {Simultaneous localization and mapping (SLAM) consists in the concurrent construction of a model of the environment (the map), and the estimation of the state of the robot moving within it. The SLAM community has made astonishing progress over the last 30 years, enabling large-scale real-world applications and witnessing a steady transition of this technology to industry. We survey the current state of SLAM and consider future directions. We start by presenting what is now the de-facto standard formulation for SLAM. We then review related work, covering a broad set of topics including robustness and scalability in long-term mapping, metric and semantic representations for mapping, theoretical performance guarantees, active SLAM and exploration, and other new frontiers. This paper simultaneously serves as a position paper and tutorial to those who are users of SLAM. By looking at the published research with a critical eye, we delineate open challenges and new research issues, that still deserve careful scientific investigation. The paper also contains the authors' take on two questions that often animate discussions during robotics conferences: Do robots need SLAM? and Is SLAM solved?},
+  doi       = {10.1109/TRO.2016.2624754},
+  file      = {:cadena2016.pdf:PDF},
+  keywords  = {SLAM (robots);SLAM community;SLAM users;critical eye;long-term mapping;semantic representations;simultaneous-localization-and-mapping;Graph theory;Localization;Robustness;Service robots;Simultaneous location and mapping;Factor graphs;localization;mapping;maximum a posteriori estimation;perception;robots;sensing;simultaneous localization and mapping (SLAM)},
+  owner     = {shankar},
+  timestamp = {2017.06.09 14:06},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
