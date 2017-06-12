@@ -15117,7 +15117,7 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
   booktitle  = {Proceedings of the International Symposium on Artifical Intelligence, Robotics and Automation in Space},
   year       = {2010},
   file       = {:cocaud2010.pdf:PDF},
-  groups     = {Surface Landing, Landmark tracking},
+  groups     = {Surface Landing, Landmark tracking, SLAM},
   keywords   = {read},
   owner      = {shankar},
   review     = {* Only shows the SLAM algorithm
@@ -15502,7 +15502,7 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
   booktitle  = {Proceedings of the 23\textsuperscript{rd} International Symposium on Space Flight Dynamics, Pasadena, California},
   year       = {2012},
   file       = {:cocaud2012.pdf:PDF},
-  groups     = {Surface Landing},
+  groups     = {Surface Landing, SLAM},
   keywords   = {read},
   owner      = {shankar},
   review     = {* Uses a particle filter for pose estimation
@@ -15569,6 +15569,7 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
   abstract  = {Simultaneous localization and mapping (SLAM) consists in the concurrent construction of a model of the environment (the map), and the estimation of the state of the robot moving within it. The SLAM community has made astonishing progress over the last 30 years, enabling large-scale real-world applications and witnessing a steady transition of this technology to industry. We survey the current state of SLAM and consider future directions. We start by presenting what is now the de-facto standard formulation for SLAM. We then review related work, covering a broad set of topics including robustness and scalability in long-term mapping, metric and semantic representations for mapping, theoretical performance guarantees, active SLAM and exploration, and other new frontiers. This paper simultaneously serves as a position paper and tutorial to those who are users of SLAM. By looking at the published research with a critical eye, we delineate open challenges and new research issues, that still deserve careful scientific investigation. The paper also contains the authors' take on two questions that often animate discussions during robotics conferences: Do robots need SLAM? and Is SLAM solved?},
   doi       = {10.1109/TRO.2016.2624754},
   file      = {:cadena2016.pdf:PDF},
+  groups    = {SLAM},
   keywords  = {SLAM (robots);SLAM community;SLAM users;critical eye;long-term mapping;semantic representations;simultaneous-localization-and-mapping;Graph theory;Localization;Robustness;Service robots;Simultaneous location and mapping;Factor graphs;localization;mapping;maximum a posteriori estimation;perception;robots;sensing;simultaneous localization and mapping (SLAM)},
   owner     = {shankar},
   timestamp = {2017.06.09 14:06},
@@ -15595,6 +15596,63 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
   timestamp = {2017.06.09 21:06},
 }
 
+@Article{durrant-whyte2006,
+  author    = {H. Durrant-Whyte and T. Bailey},
+  title     = {Simultaneous localization and mapping: part I},
+  journal   = {IEEE Robotics Automation Magazine},
+  year      = {2006},
+  volume    = {13},
+  number    = {2},
+  pages     = {99--110},
+  month     = jun,
+  issn      = {1070-9932},
+  abstract  = {This paper describes the simultaneous localization and mapping (SLAM) problem and the essential methods for solving the SLAM problem and summarizes key implementations and demonstrations of the method. While there are still many practical issues to overcome, especially in more complex outdoor environments, the general SLAM method is now a well understood and established part of robotics. Another part of the tutorial summarized more recent works in addressing some of the remaining issues in SLAM, including computation, feature representation, and data association},
+  doi       = {10.1109/MRA.2006.1638022},
+  file      = {:durrant-whyte2006.pdf:PDF},
+  groups    = {SLAM},
+  keywords  = {mobile robots;path planning;SLAM problem;mobile robots;simultaneous localization and mapping problem;Artificial intelligence;Bayesian methods;Buildings;History;Mobile robots;Navigation;Particle filters;Robotics and automation;Simultaneous localization and mapping;Vehicles},
+  owner     = {shankar},
+  timestamp = {2017.06.12 12:06},
+}
+
+@Article{bailey2006,
+  author    = {T. Bailey and H. Durrant-Whyte},
+  title     = {Simultaneous localization and mapping (SLAM): part II},
+  journal   = {IEEE Robotics Automation Magazine},
+  year      = {2006},
+  volume    = {13},
+  number    = {3},
+  pages     = {108--117},
+  month     = sep,
+  issn      = {1070-9932},
+  abstract  = {This paper discusses the recursive Bayesian formulation of the simultaneous localization and mapping (SLAM) problem in which probability distributions or estimates of absolute or relative locations of landmarks and vehicle pose are obtained. The paper focuses on three key areas: computational complexity; data association; and environment representation},
+  doi       = {10.1109/MRA.2006.1678144},
+  file      = {:bailey2006.pdf:PDF},
+  groups    = {SLAM},
+  keywords  = {Bayes methods;computational complexity;mobile robots;path planning;statistical distributions;computational complexity;data association;environment representation;mobile robot;probability distributions;recursive Bayesian formulation;simultaneous localization and mapping;vehicle pose;Bayesian methods;Computational complexity;Computational efficiency;Delay estimation;Mobile robots;Robotics and automation;Robustness;Simultaneous localization and mapping;Uncertainty;Vehicles},
+  owner     = {shankar},
+  timestamp = {2017.06.12 12:06},
+}
+
+@Article{wooden2006,
+  author    = {D. Wooden},
+  title     = {A guide to vision-based map building},
+  journal   = {IEEE Robotics Automation Magazine},
+  year      = {2006},
+  volume    = {13},
+  number    = {2},
+  pages     = {94--98},
+  month     = jun,
+  issn      = {1070-9932},
+  abstract  = {This paper describes a simple vision-based mapping system for mobile robot navigation in an unknown outdoor environment, consistent with the efforts of Georgia Tech's team for the DARPA-sponsored Learning Applied to Ground Robots (LAGR) project. This approach, which has been robust to different environments and responsive to time-critical constraints, is a good example of robotics in practice},
+  doi       = {10.1109/MRA.2006.1638021},
+  file      = {:wooden2006.pdf:PDF},
+  groups    = {SLAM},
+  keywords  = {mobile robots;robot vision;Learning Applied to Ground Robots project;camera frames;coordinate transformations;cost maps;map building;mobile robot navigation;outdoor real-time robotics platform;stereo depth maps;unknown outdoor course;vision-based mapping system;Cameras;Computational geometry;Global Positioning System;Hardware;Linux;Robot kinematics;Robot sensing systems;Robot vision systems;Robotics and automation;Switches},
+  owner     = {shankar},
+  timestamp = {2017.06.12 12:06},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
 
 @Comment{jabref-meta: groupstree:
@@ -15616,6 +15674,7 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
 2 ExplicitGroup:Landmark tracking\;1\;;
 2 ExplicitGroup:Structure from Motion\;2\;;
 2 ExplicitGroup:Operational Missions\;2\;;
+1 ExplicitGroup:SLAM\;1\;;
 }
 
 @Comment{jabref-meta: saveActions:enabled;
