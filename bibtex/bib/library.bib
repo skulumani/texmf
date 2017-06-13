@@ -15612,7 +15612,24 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
   groups     = {SLAM},
   keywords   = {mobile robots;path planning;SLAM problem;mobile robots;simultaneous localization and mapping problem;Artificial intelligence;Bayesian methods;Buildings;History;Mobile robots;Navigation;Particle filters;Robotics and automation;Simultaneous localization and mapping;Vehicles, read},
   owner      = {shankar},
-  timestamp  = {2017.06.12 12:06},
+  review     = {* Build a consistent map of an unknown enviornment while determining own location within the map
+* At a theoretical and conceptual level, SLAM can now be considered a solved problem
+* Key early contribution was the recognition that there is a high degree of correlation between estimates of the location of different landmarks in the map, and that the correlation between landmarks would grow with more observations.
+* Another early contribution was the fact that a consitent full solution would require a joint state composed of the vehicle pose and every landmark position to be updated with each observation. This would require a large state vector that required computations which scale as the square of the number of landmarks
+* Conceptual breakthrough was the formulating the problem as a combined mapping and localization estimation problem would lead to a convergent solution. More measurements will lead to a converged map and localization estimate
+* The ideal goal is to make a recursive solution for the SLAM problem.
+* Using a Bayseian probabilistic framework allows for a two-step predictor/corrector setup to estimate robot pose and map landmarks conditioned on inputs, measurements, and preivous states
+* Error between estimated and true landmark locations is common between landmarks and is in fact due to a single source; errors in the knowledge of the robot
+* Relative locations between two landmarks are known with high accuracy
+* Correlation between landmark estimates increases monotonically with more observations and that knowledge of relative landmark location always improves and never diverges regardless of robot motion
+* The measurements can be considered as nearly independent measurements of the relative location between landmarks
+* Most common approach to solve probablistic SLAM - State space approach with additive gaussian noise using EKF-SLAM or represent more general particle filter approach for general distributions using the FastSLAM
+* There is a large computational effort as each update step requires that all landmarks and the joint covariance matrix must be updated each time a measurement is made
+* Another important consideration is that correct data association will cause SLAM to completely fail
+* Measurment/Landmark association becomes even more difficult when landmarks look different from different views
+* The key improvement with FastSLAM is the map is represented as a set of independent Gaussians with linear complexity rather than a joint map covariance with quadratic complexity
+* Since we're dealing with particle filters we must resample to remove low weighted particles. However SIS sampling is only good for systems that exponentially forget their past, future states should become increasingly independent of previous states},
+  timestamp  = {2017.06.13 10:06},
 }
 
 @Article{bailey2006,
