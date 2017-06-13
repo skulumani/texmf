@@ -15648,7 +15648,23 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
   groups     = {SLAM},
   keywords   = {Bayes methods;computational complexity;mobile robots;path planning;statistical distributions;computational complexity;data association;environment representation;mobile robot;probability distributions;recursive Bayesian formulation;simultaneous localization and mapping;vehicle pose;Bayesian methods;Computational complexity;Computational efficiency;Delay estimation;Mobile robots;Robotics and automation;Robustness;Simultaneous localization and mapping;Uncertainty;Vehicles, read},
   owner      = {shankar},
-  timestamp  = {2017.06.12 12:06},
+  review     = {* Some key hurdles that need to be addressed for SLAM: lots of computations which grows as more landmarks are added, correct association of measurements with landmarks, storing richer data about the landmarks (appearance/shape etc)
+* In the state-based SLAM formulation the process model only updates the robot state, and the observation state only updates the landmarks
+* There are some methods to reduce complexity in the EKF-SLAM approach:
+  * Re-formulate the time-update using state-augmentation - assume the motion/dynamics only operate on robot state adn not the map
+    * Seperate state adn map in EKF allows for new landmarks to be reduced to linear calculations
+  * Observeration update can be partioned - only update a local map which is infreqently updated to the global map
+    * sensor rate updates are confined to a smaller local region
+    * Global pose is possible through vector addition of local maps
+    * Global map is updated at a much lower freqency
+  * Using information matrix form - creates sparse matrices which is faster
+    * Many off-diagonal elements of the information matrix are zero
+    * Efficient update procedures are possible using the sparse matrices
+  * Sub-mapping allows for updates in a local map instead of the global map
+    * Nearby landmarks are defined in a local coordinate frame
+* Data association using batch gating. Also can use a multiple hypothesis approach to propogate multiple associations at once
+  * Batch gating is usually sufficient to achieve reliable association},
+  timestamp  = {2017.06.13 10:06},
 }
 
 @Article{wooden2006,
