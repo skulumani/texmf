@@ -15570,9 +15570,25 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
   doi        = {10.1109/TRO.2016.2624754},
   file       = {:cadena2016.pdf:PDF},
   groups     = {SLAM},
-  keywords   = {SLAM (robots);SLAM community;SLAM users;critical eye;long-term mapping;semantic representations;simultaneous-localization-and-mapping;Graph theory;Localization;Robustness;Service robots;Simultaneous location and mapping;Factor graphs;localization;mapping;maximum a posteriori estimation;perception;robots;sensing;simultaneous localization and mapping (SLAM), read},
+  keywords   = {SLAM (robots);SLAM community;SLAM users;critical eye;long-term mapping;semantic representations;simultaneous-localization-and-mapping;Graph theory;Localization;Robustness;Service robots;Simultaneous location and mapping;Factor graphs;localization;mapping;maximum a posteriori estimation;perception;robots;sensing;simultaneous localization and mapping (SLAM), read, rank5},
   owner      = {shankar},
-  timestamp  = {2017.06.09 14:06},
+  review     = {* Great survey paper on SLAM - lots of detail and many references
+* SLAM - simultaneous estimation of the state of a robot and the construction of a map of the enviornment
+  * Map is frequently used for other tasks - path planning/visualization
+  * Without Map dead reckoning would quickly diverge over time - by revisiting a known landmark (loop closure) the error is reset
+  * SLAM might not be required if exact position is known already (GPS)
+* Classical age of SLAM (1986-2004) which is in durrant-whyte2006 is characterized by EKF, Rao-blackwellized particle filters and maximum  likelihood estimation
+* Algorithmic analysis age (2004-2015) - fundamental study of the properties of SLAM, observability, convergence, consistencey. Main libraries produced
+* Main SLAM systems are composed of a front and back end
+  * Front end abstracts measurements into models for estimation
+    * Difficult to directly write sensor measurements as a analytical functino of the state which is required in MAP estimation
+    * Data association is also critical to the front end  - short and long term association to handling the connection between measurements and landmarks as well as long term loop closure
+  * Back end performs inferences on the data from the front end
+    * Standard method is Maximum a posterior estimation - maximize belief of state/map given all the measurements using bayes rule
+    * Generally proven to be more accurate and efficient than nonlinear filtering approaches
+
+* Great discussion on future open problems in SLAM: robustness, failure modes, scalability, map representations},
+  timestamp  = {2017.06.15 10:06},
 }
 
 @Book{curtis2013,
@@ -15610,7 +15626,7 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
   doi        = {10.1109/MRA.2006.1638022},
   file       = {:durrant-whyte2006.pdf:PDF},
   groups     = {SLAM},
-  keywords   = {mobile robots;path planning;SLAM problem;mobile robots;simultaneous localization and mapping problem;Artificial intelligence;Bayesian methods;Buildings;History;Mobile robots;Navigation;Particle filters;Robotics and automation;Simultaneous localization and mapping;Vehicles, read},
+  keywords   = {mobile robots;path planning;SLAM problem;mobile robots;simultaneous localization and mapping problem;Artificial intelligence;Bayesian methods;Buildings;History;Mobile robots;Navigation;Particle filters;Robotics and automation;Simultaneous localization and mapping;Vehicles, read, rank5},
   owner      = {shankar},
   review     = {* Build a consistent map of an unknown enviornment while determining own location within the map
 * At a theoretical and conceptual level, SLAM can now be considered a solved problem
@@ -15646,7 +15662,7 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
   doi        = {10.1109/MRA.2006.1678144},
   file       = {:bailey2006.pdf:PDF},
   groups     = {SLAM},
-  keywords   = {Bayes methods;computational complexity;mobile robots;path planning;statistical distributions;computational complexity;data association;environment representation;mobile robot;probability distributions;recursive Bayesian formulation;simultaneous localization and mapping;vehicle pose;Bayesian methods;Computational complexity;Computational efficiency;Delay estimation;Mobile robots;Robotics and automation;Robustness;Simultaneous localization and mapping;Uncertainty;Vehicles, read},
+  keywords   = {Bayes methods;computational complexity;mobile robots;path planning;statistical distributions;computational complexity;data association;environment representation;mobile robot;probability distributions;recursive Bayesian formulation;simultaneous localization and mapping;vehicle pose;Bayesian methods;Computational complexity;Computational efficiency;Delay estimation;Mobile robots;Robotics and automation;Robustness;Simultaneous localization and mapping;Uncertainty;Vehicles, read, rank5},
   owner      = {shankar},
   review     = {* Some key hurdles that need to be addressed for SLAM: lots of computations which grows as more landmarks are added, correct association of measurements with landmarks, storing richer data about the landmarks (appearance/shape etc)
 * In the state-based SLAM formulation the process model only updates the robot state, and the observation state only updates the landmarks
@@ -15716,7 +15732,16 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
   keywords   = {read},
   owner      = {shankar},
   publisher  = {Blackwell Publishing Ltd},
-  timestamp  = {2017.06.14 12:06},
+  review     = {* Method to generate topography maps from imagery 
+* These local topography maps are used as landmarks in the map building process 
+* The local level maps are better across a wide range of viewing angles/conditions as compared to feature points in an image
+* The method is from stereophotoclinometry - estimate surface slope and albedo at each pixel from many images
+* This is then used to determine a shape model
+* Now the spacecraft is free to fly any trajectory rather than keeping illumination constant usign a sun-synchronous orbit
+* Using some iterative methods the slope and relative motion can be computed and an external source can be used to resolve the overall bias in the data
+* All of these local topographic maps are then used to generate a shape model 
+* This is a really cool idea and it might be neat to have a seqential method to do this, or some way to output the uncertainty associated with the model/localization},
+  timestamp  = {2017.06.15 09:06},
   url        = {http://dx.doi.org/10.1111/j.1945-5100.2008.tb00692.x},
 }
 
@@ -15805,33 +15830,55 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
 }
 
 @InProceedings{tanimoto2013,
-  author    = {A. Tanimoto and N. Takeishi and T. Yairi and Y. Tsuda and F. Terui and N. Ogawa and Y. Mimasu},
-  title     = {Fast estimation of asteroid shape and motion for spacecraft navigation},
-  booktitle = {2013 IEEE International Conference on Robotics and Biomimetics (ROBIO)},
-  year      = {2013},
-  pages     = {1550--1555},
-  month     = dec,
-  abstract  = {In this paper, we consider fast simultaneous estimation problem of the geometric shape of the asteroid and the relative motion of the spacecraft. In asteroid exploration missions, the information of asteroid shape and motion is needed to find suitable landing sites and navigate the spacecraft safely. In the previous HAYABUSA mission, large part of the estimation was performed manually by ground operators. We propose an efficient automatic estimation method using the image feature matching and matrix decomposition based fast 3D reconstruction techniques. Preliminary experiment results are also shown.},
-  doi       = {10.1109/ROBIO.2013.6739687},
-  file      = {:tanimoto2013.pdf:PDF},
-  groups    = {SLAM},
-  keywords  = {aerospace computing;aerospace safety;aircraft navigation;asteroids;entry, descent and landing (spacecraft);image matching;image reconstruction;matrix decomposition;motion estimation;space vehicles;HAYABUSA mission;asteroid exploration mission;asteroid shape estimation;automatic estimation method;fast 3D reconstruction technique;geometric shape estimation;image feature matching;landing site;matrix decomposition;relative motion estimation;spacecraft navigation;Cameras;Estimation;Image reconstruction;Matrix decomposition;Shape;Space vehicles;Three-dimensional displays},
-  owner     = {shankar},
-  timestamp = {2017.06.14 13:06},
+  author     = {A. Tanimoto and N. Takeishi and T. Yairi and Y. Tsuda and F. Terui and N. Ogawa and Y. Mimasu},
+  title      = {Fast estimation of asteroid shape and motion for spacecraft navigation},
+  booktitle  = {2013 IEEE International Conference on Robotics and Biomimetics (ROBIO)},
+  year       = {2013},
+  pages      = {1550--1555},
+  month      = dec,
+  abstract   = {In this paper, we consider fast simultaneous estimation problem of the geometric shape of the asteroid and the relative motion of the spacecraft. In asteroid exploration missions, the information of asteroid shape and motion is needed to find suitable landing sites and navigate the spacecraft safely. In the previous HAYABUSA mission, large part of the estimation was performed manually by ground operators. We propose an efficient automatic estimation method using the image feature matching and matrix decomposition based fast 3D reconstruction techniques. Preliminary experiment results are also shown.},
+  doi        = {10.1109/ROBIO.2013.6739687},
+  file       = {:tanimoto2013.pdf:PDF},
+  groups     = {SLAM},
+  keywords   = {aerospace computing;aerospace safety;aircraft navigation;asteroids;entry, descent and landing (spacecraft);image matching;image reconstruction;matrix decomposition;motion estimation;space vehicles;HAYABUSA mission;asteroid exploration mission;asteroid shape estimation;automatic estimation method;fast 3D reconstruction technique;geometric shape estimation;image feature matching;landing site;matrix decomposition;relative motion estimation;spacecraft navigation;Cameras;Estimation;Image reconstruction;Matrix decomposition;Shape;Space vehicles;Three-dimensional displays, read},
+  owner      = {shankar},
+  review     = {* Uses a vision/image sensor to take pictures of an asteroid to both estimate relative motion and the shape of the asteroid
+* It seems to use a version of the matrix decompisition which can simultaneously estimate motion of features and the relative motion of spacecraft
+* The paper makes many simplifying assumptions which greatly restricts the usefulness:
+  * The spacecraft orbits in a fixed plane relative to the asteroid
+  * The asteroid is rotating without nutation - fixed axis spin
+  * The spacecraft orbits in a plane orthogonal to the asteroid rotation - equatorial orbit
+  * Spherical asteroid
+  * Spacecraft is far from asteroid - can see an entire hemisphere
+  * Uses a small angle approximation and linear motion model for landmarks between images},
+  timestamp  = {2017.06.15 08:06},
 }
 
 @Article{aulinas2008,
-  author    = {Aulinas, Josep and Petillot, Yvan R and Salvi, Joaquim and Llad{\'o}, Xavier},
-  title     = {The SLAM problem: a survey.},
-  journal   = {CCIA},
-  year      = {2008},
-  volume    = {184},
-  number    = {1},
-  pages     = {363--371},
-  file      = {:aulinas2008.pdf:PDF},
-  groups    = {SLAM},
-  owner     = {shankar},
-  timestamp = {2017.06.14 13:06},
+  author     = {Aulinas, Josep and Petillot, Yvan R and Salvi, Joaquim and Llad{\'o}, Xavier},
+  title      = {The SLAM problem: a survey.},
+  journal    = {CCIA},
+  year       = {2008},
+  volume     = {184},
+  number     = {1},
+  pages      = {363--371},
+  file       = {:aulinas2008.pdf:PDF},
+  groups     = {SLAM},
+  keywords   = {read},
+  owner      = {shankar},
+  review     = {* Short overview of SLAM 
+* There are several main probablisitic  approaches to teh SLAM problem
+  * Kalman filter - assumption of additive gaussian error in state and measurement models. Information filter version is supposed to be better
+    * Eventually there will be many landmarks and matrix inversion becomes expensive
+  * Particle filter - able to handle non Gaussian distributions. Only been applied to the localization and not really the mapping portion yet
+    * FASTSLAM is a good version which seperates localization and landmark estimation into seperate problems. This particle approach allows for many possible data associations in comparision to KF SLAM which is stuck with only a single data association
+  * Expectation maximization method - two step process for getting an ideal map rather than the localization
+    * Able to handle the data association problem very well. 
+    * Iteratively  localizes the robot relative to a map by generating various hypotheses of robot location which are then used in a second step of translation to map features
+* Key problem is associating measurements with specific landmarks in teh map. Getting this wrong can break SLAM
+  * Better to use more features, 3D features rather than only 2D information
+* Paper has a simple table listing the pros vs cons of the various SLAM approaches},
+  timestamp  = {2017.06.15 09:06},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
