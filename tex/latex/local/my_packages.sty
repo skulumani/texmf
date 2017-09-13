@@ -31,7 +31,8 @@
 \graphicspath{{./figures/}}% path to images
 
 %------------- CITATION PACKAGES------------------------------
-
+\usepackage{color}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.3}
 \usepackage[pdfusetitle]{hyperref} % links to stuff
 \hypersetup{
     unicode=false,          % non-Latin characters in Acrobat’s bookmarks
@@ -47,14 +48,16 @@
     pdfkeywords={}, % list of keywords
     pdfnewwindow=true,      % links in new PDF window
     colorlinks=false,       % false: boxed links; true: colored links
-    linkcolor=black,          % color of internal links (change box color with linkbordercolor)
-    citecolor=black,        % color of links to bibliography
+    linkcolor=darkblue,          % color of internal links (change box color with linkbordercolor)
+    citecolor=darkblue,        % color of links to bibliography
     filecolor=magenta,      % color of file links
-    urlcolor=black,           % color of external link
+    urlcolor=darkblue,           % color of external link
+    anchorcolor=darkblue,
     bookmarksnumbered=true,     
     bookmarksopen=true,         
     bookmarksopenlevel=1,
     pdfpagemode=UseOutlines
+    breaklinks
 }
 
 % --------------------------------------
