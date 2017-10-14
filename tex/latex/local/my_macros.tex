@@ -59,6 +59,15 @@
 \DeclareSIUnit\solarsec{solar~sec}
 \DeclareSIUnit\julianday{JD}
 
+% proposition enviornments and proofs
+\newcommand{\squeezeup}{\vspace{-2.5mm}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{lem}{Lemma}
+\newtheorem{prop}{Proposition}
+\newtheorem{cor}{Corollary}
+\newtheorem{remark}{Remark}
+
 % Custom citation command for full cite in presentations - just show author, title, and y ear
 \newcommand{\citecompact}[1]{\citeauthor{#1}, \citetitle{#1}, \citeyear{#1}}
 
@@ -108,3 +117,22 @@
 \newcommand{\ftwoyd}{\ensuremath{f_{2_{\dot y}}}}
 \newcommand{\fthreeyd}{\ensuremath{f_{3_{\dot y}}}}
 \newcommand{\ffouryd}{\ensuremath{f_{4_{\dot y}}}}
+
+% edit cref citations for IEEE format
+\crefformat{equation}{(#2#1#3)} % no abbreviation for equation numbers
+\Crefformat{equation}{Equation~(#2#1#3)} % no abbreviation for equation numbers
+\crefrangeformat{equation}{(#3#1#4--#5#2#6)}
+\Crefrangeformat{equation}{(#3#1#4--#5#2#6)}
+\crefmultiformat{equation}{(#2#1#3)}{ and~(#2#1#3)}{, (#2#1#3)}{ and~(#2#1#3)}
+% edit cref citations for IEEE format
+\crefformat{figure}{Fig.~#2#1#3} % no abbreviation for equation numbers
+\Crefformat{figure}{Fig.~#2#1#3} % no abbreviation for equation numbers
+\crefrangeformat{figure}{Figs.~#3#1#4--#5#2#6}
+\Crefrangeformat{figure}{Figs.~#3#1#4--#5#2#6}
+\crefmultiformat{figure}{Figs.~#2#1#3}{ and~#2#1#3}{, #2#1#3}{ and~#2#1#3}
+% for items in a list
+\crefformat{enumi}{(#2#1#3)}
+\Crefformat{enumi}{Item~(#2#1#3)} 
+\crefrangeformat{enumi}{(#3#1#4--#5#2#6)}
+\Crefrangeformat{enumi}{Items~(#3#1#4--#5#2#6)}
+\crefmultiformat{enumi}{(#2#1#3)}{ and~(#2#1#3)}{, (#2#1#3)}{ and~(#2#1#3)}
