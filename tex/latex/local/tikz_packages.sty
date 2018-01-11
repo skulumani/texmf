@@ -2,12 +2,15 @@
 \usepackage{pgf}
 % TIKZ
 \usepackage{tikz}
-\usepackage{environ}
-\usetikzlibrary{decorations.markings,decorations.pathreplacing,calc}
-\usetikzlibrary{decorations.shapes}
-\usetikzlibrary{plotmarks, positioning}
-\usetikzlibrary{arrows.meta}
 \usepackage{tikz-3dplot}
+\usepackage{environ}
+\usepackage[american,siunitx]{circuitikz}
+\usetikzlibrary{decorations.markings,
+                decorations.pathreplacing,
+                decorations.pathmorphing,
+                decorations.shapes,
+                calc, patterns,
+                plotmarks, positioning, arrows.meta}
 
 \tikzset{help lines/.style={very thin,color=gray!50}} % modify the help lines style
 
@@ -46,4 +49,23 @@
 }
 
 
+% Mechanical systems
 
+\tikzstyle{spring}=[thick,decorate,decoration={zigzag,pre length=0.3cm,post length=0.3cm,segment length=6}]
+
+\tikzstyle{damper}=[thick,decoration={markings, mark connection node=dmp, mark=at position 0.5 with 
+{
+    \node (dmp) [thick,inner sep=0pt,transform shape,rotate=-90,minimum
+width=15pt,minimum height=3pt,draw=none] {};
+    \draw [thick] ($(dmp.north east)+(2pt,0)$) -- (dmp.south east) -- (dmp.south
+west) -- ($(dmp.north west)+(2pt,0)$);
+    \draw [thick] ($(dmp.north)+(0,-5pt)$) -- ($(dmp.north)+(0,5pt)$);
+}
+}, decorate]
+
+\tikzstyle{ground}=[fill,pattern=north east lines,draw=none,minimum
+width=0.75cm,minimum height=0.3cm]
+
+\tikzstyle{block} = [draw, thick, rectangle, minimum height=3cm, minimum width=3cm]
+
+\tikzstyle{virtual} = [coordinate]
