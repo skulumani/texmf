@@ -16248,13 +16248,13 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
   year       = {2017},
   month      = aug,
   file       = {paper:mcmahon2017.pdf:PDF;presentation:mcmahon2017_2.pptx:PowerPoint 2007+},
-  groups     = {Interesting papers, Point Cloud Reconstruction},
+  groups     = {Interesting papers, Shape Reconstruction},
   keywords   = {read},
   owner      = {shankar},
   review     = {* Approach to combine different resolution shape models into one
 * Uses the ICQ format to efficiently combine resolutions
 * Lower resolution shape files are intrinsicly linked to higher resolutions via the ICQ shape model},
-  timestamp  = {2018.01.16 15:01},
+  timestamp  = {2018.01.17 09:01},
 }
 
 @InProceedings{venditti2017,
@@ -16326,7 +16326,7 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
   booktitle  = {Proceedings of the Sixth ACM Symposium on Solid Modeling and Applications},
   doi        = {10.1145/376957.376986},
   file       = {paper:amenta2001.pdf:PDF},
-  groups     = {Point Cloud Reconstruction},
+  groups     = {Shape Reconstruction},
   isbn       = {1-58113-366-9},
   keywords   = {3d reconstruction, point cloud, skimmed},
   location   = {Ann Arbor, Michigan, USA},
@@ -16334,28 +16334,31 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
   owner      = {shankar},
   publisher  = {ACM},
   series     = {SMA '01},
-  timestamp  = {2017.09.29 15:09},
+  timestamp  = {2018.01.17 09:01},
   url        = {http://doi.acm.org/10.1145/376957.376986},
 }
 
 @Article{ohtake2005,
-  author    = {Ohtake, Yutaka and Belyaev, Alexander and Alexa, Marc and Turk, Greg and Seidel, Hans-Peter},
-  title     = {Multi-level Partition of Unity Implicits},
-  year      = {2005},
-  acmid     = {1198649},
-  address   = {New York, NY, USA},
-  articleno = {173},
-  booktitle = {ACM SIGGRAPH 2005 Courses},
-  doi       = {10.1145/1198555.1198649},
-  file      = {paper:ohtake2005.pdf:PDF},
-  groups    = {Point Cloud Reconstruction},
-  keywords  = {adaptive distance field approximation, error-controlled subdivision, implicit modeling, partition of unity approximation},
-  location  = {Los Angeles, California},
-  owner     = {shankar},
-  publisher = {ACM},
-  series    = {SIGGRAPH '05},
-  timestamp = {2017.09.29 15:09},
-  url       = {http://doi.acm.org/10.1145/1198555.1198649},
+  author     = {Ohtake, Yutaka and Belyaev, Alexander and Alexa, Marc and Turk, Greg and Seidel, Hans-Peter},
+  title      = {Multi-level Partition of Unity Implicits},
+  year       = {2005},
+  acmid      = {1198649},
+  address    = {New York, NY, USA},
+  articleno  = {173},
+  booktitle  = {ACM SIGGRAPH 2005 Courses},
+  doi        = {10.1145/1198555.1198649},
+  file       = {paper:ohtake2005.pdf:PDF},
+  groups     = {Shape Reconstruction},
+  keywords   = {adaptive distance field approximation, error-controlled subdivision, implicit modeling, partition of unity approximation, read, prio3},
+  location   = {Los Angeles, California},
+  owner      = {shankar},
+  publisher  = {ACM},
+  review     = {* Use a mult-level partioning scheme (obbtree) to determine a surface shape from point cloud
+* Creates a set of implicit functions and combine all of them into a a shape model
+* The implicit funcitons allows for functions based on shape modelling operations (merging, blending)},
+  series     = {SIGGRAPH '05},
+  timestamp  = {2018.01.17 14:01},
+  url        = {http://doi.acm.org/10.1145/1198555.1198649},
 }
 
 @Article{bolitho2009,
@@ -16365,10 +16368,10 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
   year      = {2009},
   pages     = {678--689},
   file      = {paper:bolitho2009.pdf:PDF},
-  groups    = {Point Cloud Reconstruction},
+  groups    = {Shape Reconstruction},
   owner     = {shankar},
   publisher = {Springer},
-  timestamp = {2017.09.29 15:09},
+  timestamp = {2018.01.17 09:01},
 }
 
 @InProceedings{pradeep2013,
@@ -16379,9 +16382,16 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
   pages        = {83--88},
   organization = {IEEE},
   file         = {paper:pradeep2013.pdf:PDF},
-  groups       = {Point Cloud Reconstruction},
+  groups       = {Shape Reconstruction},
+  keywords     = {read},
   owner        = {shankar},
-  timestamp    = {2017.09.29 15:09},
+  review       = {* 3D reconstruction using a single RGB camera (can be cheap ie. tablet/phone)
+* First estimate the pose of the camera
+* Track corners/features across multiple images to do stereo correspondance 
+* The extracted depth information is then used in a voxel-based implicit model to surfaces are then extracted
+
+* },
+  timestamp    = {2018.01.17 10:01},
 }
 
 @Article{mur-artal2015a,
@@ -16390,9 +16400,9 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
   journal   = {Rome, Italy, July},
   year      = {2015},
   file      = {:mur-artal2015b.pdf:PDF},
-  groups    = {Point Cloud Reconstruction},
+  groups    = {Shape Reconstruction},
   owner     = {shankar},
-  timestamp = {2017.09.29 15:09},
+  timestamp = {2018.01.17 09:01},
 }
 
 @PhdThesis{hoppe1992,
@@ -16401,11 +16411,11 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
   school    = {University of Washington},
   year      = {1992},
   file      = {:hoppe1992.pdf:PDF},
-  groups    = {Point Cloud Reconstruction},
+  groups    = {Shape Reconstruction},
   number    = {2},
   owner     = {shankar},
   publisher = {ACM},
-  timestamp = {2017.09.29 15:09},
+  timestamp = {2018.01.17 09:01},
   volume    = {26},
 }
 
@@ -16422,10 +16432,10 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
   abstract  = {Abstract The medial axis transform (or MAT) is a representation of an object as an infinite union of balls. We consider approximating the MAT of a three-dimensional object, and its complement, with a finite union of balls. Using this approximate MAT we define a new piecewise-linear approximation to the object surface, which we call the power crust. We assume that we are given as input a sufficiently dense sample of points from the object surface. We select a subset of the Voronoi balls of the sample, the polar balls, as the union of balls representation. We bound the geometric error of the union, and of the corresponding power crust, and show that both representations are topologically correct as well. Thus, our results provide a new algorithm for surface reconstruction from sample points. By construction, the power crust is always the boundary of a polyhedral solid, so we avoid the polygonization, hole-filling or manifold extraction steps used in previous algorithms. The union of balls representation and the power crust have corresponding piecewise-linear dual representations, which in some sense approximate the medial axis. We show a geometric relationship between these duals and the medial axis by proving that, as the sampling density goes to infinity, the set of poles, the centers of the polar balls, converges to the medial axis.},
   doi       = {https://doi.org/10.1016/S0925-7721(01)00017-7},
   file      = {:amenta2001a.pdf:PDF},
-  groups    = {Point Cloud Reconstruction},
+  groups    = {Shape Reconstruction},
   keywords  = {Surface reconstruction, Medial axis, Power diagram},
   owner     = {shankar},
-  timestamp = {2017.09.29 16:09},
+  timestamp = {2018.01.17 09:01},
   url       = {http://www.sciencedirect.com/science/article/pii/S0925772101000177},
 }
 
@@ -16499,9 +16509,9 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
   number    = {1},
   pages     = {161--185},
   file      = {:berger2014.pdf:PDF},
-  groups    = {Point Cloud Reconstruction},
+  groups    = {Shape Reconstruction},
   owner     = {shankar},
-  timestamp = {2018.01.16 14:01},
+  timestamp = {2018.01.17 09:01},
 }
 
 @Book{wiener1961,
@@ -16790,13 +16800,13 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
   pages        = {41--48},
   organization = {IEEE},
   file         = {:turner2013.pdf:PDF},
-  groups       = {Point Cloud Reconstruction},
+  groups       = {Shape Reconstruction},
   keywords     = {read},
   owner        = {shankar},
   review       = {* Uses a voxel based binning approach to derive a shape model for a interior areas
 * It's specifically made to handle flat planar regions, such as walls and floors
 * Better memory performance},
-  timestamp    = {2018.01.16 17:01},
+  timestamp    = {2018.01.17 09:01},
 }
 
 @InProceedings{marton2009,
@@ -16808,9 +16818,14 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
   organization  = {IEEE},
   __markedentry = {[shankar:]},
   file          = {:marton2009.pdf:PDF},
-  groups        = {Point Cloud Reconstruction},
+  groups        = {Shape Reconstruction},
+  keywords      = {read, prio3},
   owner         = {shankar},
-  timestamp     = {2018.01.16 14:01},
+  review        = {* Approach to build a surface using triangulation from the point cloud
+* Supposed to be fast and easy/memory inefficient
+* Also allows for partial scan updates rather than building the entire mesh again
+* example of this is in PCL at http://pointclouds.org/documentation/tutorials/greedy_projection.php#greedy-triangulation},
+  timestamp     = {2018.01.17 14:01},
 }
 
 @InProceedings{awrangjeb2015,
@@ -16822,9 +16837,9 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
   organization  = {IEEE},
   __markedentry = {[shankar:6]},
   file          = {:awrangjeb2015.pdf:PDF},
-  groups        = {Point Cloud Reconstruction},
+  groups        = {Shape Reconstruction},
   owner         = {shankar},
-  timestamp     = {2018.01.16 14:01},
+  timestamp     = {2018.01.17 09:01},
 }
 
 @InProceedings{liu2007,
@@ -16833,10 +16848,10 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
   booktitle = {Proc. Of ISPRS International Workshop {\textquotedblleft}3D-ARCH},
   year      = {2007},
   file      = {:liu2007.pdf:PDF},
-  groups    = {Point Cloud Reconstruction},
+  groups    = {Shape Reconstruction},
   journal   = {Proceedings of ISPRS},
   owner     = {shankar},
-  timestamp = {2018.01.16 14:01},
+  timestamp = {2018.01.17 09:01},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
@@ -16862,7 +16877,7 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
 2 StaticGroup:Structure from Motion\;2\;1\;\;\;\;;
 2 StaticGroup:Operational Missions\;2\;1\;\;\;\;;
 1 StaticGroup:SLAM\;1\;1\;\;\;\;;
-1 StaticGroup:Point Cloud Reconstruction\;0\;1\;\;\;\;;
+1 StaticGroup:Shape Reconstruction\;0\;1\;\;\;\;;
 1 StaticGroup:Laser asteroid shape\;0\;1\;\;\;\;;
 }
 
