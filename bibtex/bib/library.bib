@@ -16509,9 +16509,9 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
   number    = {1},
   pages     = {161--185},
   file      = {:berger2014.pdf:PDF},
-  groups    = {Shape Reconstruction},
+  groups    = {Shape Reconstruction, Survey Papers},
   owner     = {shankar},
-  timestamp = {2018.01.17 09:01},
+  timestamp = {2018.01.18 15:01},
 }
 
 @Book{wiener1961,
@@ -16810,48 +16810,116 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
 }
 
 @InProceedings{marton2009,
-  author        = {Marton, Zoltan Csaba and Rusu, Radu Bogdan and Beetz, Michael},
-  title         = {On fast surface reconstruction methods for large and noisy point clouds},
-  booktitle     = {Robotics and Automation, 2009. ICRA'09. IEEE International Conference on},
-  year          = {2009},
-  pages         = {3218--3223},
-  organization  = {IEEE},
-  __markedentry = {[shankar:]},
-  file          = {:marton2009.pdf:PDF},
-  groups        = {Shape Reconstruction},
-  keywords      = {read, prio3},
-  owner         = {shankar},
-  review        = {* Approach to build a surface using triangulation from the point cloud
+  author       = {Marton, Zoltan Csaba and Rusu, Radu Bogdan and Beetz, Michael},
+  title        = {On fast surface reconstruction methods for large and noisy point clouds},
+  booktitle    = {Robotics and Automation, 2009. ICRA'09. IEEE International Conference on},
+  year         = {2009},
+  pages        = {3218--3223},
+  organization = {IEEE},
+  file         = {:marton2009.pdf:PDF},
+  groups       = {Shape Reconstruction},
+  keywords     = {read, prio3},
+  owner        = {shankar},
+  review       = {* Approach to build a surface using triangulation from the point cloud
 * Supposed to be fast and easy/memory inefficient
 * Also allows for partial scan updates rather than building the entire mesh again
 * example of this is in PCL at http://pointclouds.org/documentation/tutorials/greedy_projection.php#greedy-triangulation},
-  timestamp     = {2018.01.17 14:01},
+  timestamp    = {2018.01.18 12:01},
 }
 
 @InProceedings{awrangjeb2015,
-  author        = {Awrangjeb, Mohammad and Lu, Guojun},
-  title         = {A triangulation-based technique for building boundary identification from point cloud data},
-  booktitle     = {Image and Vision Computing New Zealand (IVCNZ), 2015 International Conference on},
-  year          = {2015},
-  pages         = {1--6},
-  organization  = {IEEE},
-  __markedentry = {[shankar:6]},
-  file          = {:awrangjeb2015.pdf:PDF},
-  groups        = {Shape Reconstruction},
-  owner         = {shankar},
-  timestamp     = {2018.01.17 09:01},
+  author       = {Awrangjeb, Mohammad and Lu, Guojun},
+  title        = {A triangulation-based technique for building boundary identification from point cloud data},
+  booktitle    = {Image and Vision Computing New Zealand (IVCNZ), 2015 International Conference on},
+  year         = {2015},
+  pages        = {1--6},
+  organization = {IEEE},
+  file         = {:awrangjeb2015.pdf:PDF},
+  groups       = {Shape Reconstruction},
+  owner        = {shankar},
+  timestamp    = {2018.01.18 13:01},
 }
 
 @InProceedings{liu2007,
-  author    = {Liu, Rui and Burschka, Darius and Hirzinger, Gerd},
-  title     = {On the way to water-tight mesh},
-  booktitle = {Proc. Of ISPRS International Workshop {\textquotedblleft}3D-ARCH},
-  year      = {2007},
-  file      = {:liu2007.pdf:PDF},
-  groups    = {Shape Reconstruction},
-  journal   = {Proceedings of ISPRS},
+  author     = {Liu, Rui and Burschka, Darius and Hirzinger, Gerd},
+  title      = {On the way to water-tight mesh},
+  booktitle  = {Proc. Of ISPRS International Workshop {\textquotedblleft}3D-ARCH},
+  year       = {2007},
+  file       = {:liu2007.pdf:PDF},
+  groups     = {Shape Reconstruction},
+  journal    = {Proceedings of ISPRS},
+  keywords   = {read},
+  owner      = {shankar},
+  review     = {* Uses another mesh generation algorithm (have to find) and creates some improvements as compared to powercrust and tight cocone
+* An updated algorithm (composed of three stesp) ensures correct watertight meshes and ensures that big holes are filled properly
+* Algorithm takes a random mesh and then outputs a watertight version of it
+* Three big steps for it
+  * Preprocessign: Identify/remove noise by treating it as small meshes attached to a larger main body, filter out any illegal edges (clockwise edge orientation), Detect all holes by looking for boundary edges
+  * Filling of holes: The holes are split into smaller 2D planes and then filed by fiting extra edges to define 2D planes
+  * Post processign: subdivide and smooth out the triangles to make a better meshs},
+  timestamp  = {2018.01.18 15:01},
+}
+
+@InProceedings{schall2005,
+  author    = {Schall, Oliver and Samozino, Marie},
+  title     = {Surface from scattered points},
+  booktitle = {A Brief Survey of Recent Developments. 1\textsuperscript{st} International Workshop on Semantic Virtual Environments, Page (S},
+  year      = {2005},
+  pages     = {138--147},
+  file      = {:schall2005.pdf:PDF},
+  groups    = {Shape Reconstruction, Survey Papers},
   owner     = {shankar},
-  timestamp = {2018.01.17 09:01},
+  timestamp = {2018.01.18 13:01},
+}
+
+@Article{cazals2006,
+  author    = {Cazals, Fr{\'e}d{\'e}ric and Giesen, Joachim},
+  title     = {Delaunay triangulation based surface reconstruction},
+  journal   = {Effective computational geometry for curves and surfaces},
+  year      = {2006},
+  pages     = {231--276},
+  file      = {:cazals2006.pdf:PDF},
+  groups    = {Shape Reconstruction, Survey Papers},
+  owner     = {shankar},
+  publisher = {Springer},
+  timestamp = {2018.01.18 13:01},
+}
+
+@Book{boissonnat2007,
+  title     = {Effective computational geometry for curves and surfaces},
+  publisher = {Springer},
+  year      = {2007},
+  author    = {Boissonnat, Jean-Daniel and Teillaud, Monique},
+  file      = {:boissonnat2007.pdf:PDF},
+  groups    = {Shape Reconstruction, Survey Papers},
+  owner     = {shankar},
+  timestamp = {2018.01.18 13:01},
+}
+
+@Book{dey2006,
+  title         = {Curve and surface reconstruction: algorithms with mathematical analysis},
+  publisher     = {Cambridge University Press},
+  year          = {2006},
+  author        = {Dey, Tamal K},
+  volume        = {23},
+  __markedentry = {[shankar:]},
+  groups        = {Shape Reconstruction},
+  owner         = {shankar},
+  timestamp     = {2018.01.18 13:01},
+}
+
+@InProceedings{lodha1997,
+  author        = {Lodha, Suresh K and Franke, Richard},
+  title         = {Scattered data techniques for surfaces},
+  booktitle     = {Scientific Visualization Conference, 1997},
+  year          = {1997},
+  pages         = {181--181},
+  organization  = {IEEE},
+  __markedentry = {[shankar:6]},
+  file          = {:lodha1997.pdf:PDF},
+  groups        = {Survey Papers},
+  owner         = {shankar},
+  timestamp     = {2018.01.18 13:01},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
@@ -16878,6 +16946,7 @@ forms of explanation to a high-precision fit with the data. [S0034-6861(98)00802
 2 StaticGroup:Operational Missions\;2\;1\;\;\;\;;
 1 StaticGroup:SLAM\;1\;1\;\;\;\;;
 1 StaticGroup:Shape Reconstruction\;0\;1\;\;\;\;;
+2 StaticGroup:Survey Papers\;0\;1\;\;\;\;;
 1 StaticGroup:Laser asteroid shape\;0\;1\;\;\;\;;
 }
 
