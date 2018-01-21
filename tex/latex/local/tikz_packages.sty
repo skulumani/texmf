@@ -10,7 +10,8 @@
                 decorations.pathmorphing,
                 decorations.shapes,
                 calc, patterns,
-                plotmarks, positioning, arrows.meta}
+                plotmarks, positioning, arrows.meta,
+                bending}
 
 \tikzset{help lines/.style={very thin,color=gray!50}} % modify the help lines style
 
@@ -69,3 +70,16 @@ width=0.75cm,minimum height=0.3cm]
 \tikzstyle{block} = [draw, thick, rectangle, minimum height=3cm, minimum width=3cm]
 
 \tikzstyle{virtual} = [coordinate]
+
+\tikzstyle{rot_damper}=[thick,decoration={markings, mark connection node=dmp, mark=at position 0.5 with 
+{
+    \node (dmp) [thick,inner sep=0pt,transform shape,rotate=-90,minimum
+width=15pt,minimum height=3pt,draw=none] {};
+    \draw [thick] ($(dmp.north)+(0,-5pt)$) -- ($(dmp.north)+(0,5pt)$);
+    \draw [thick] ($(dmp.south)+(0, -5pt)$) -- ($(dmp.south) + (0, 5pt)$);
+    \draw [thick] ($(dmp.north east)+(4pt,2pt)$) -- ($(dmp.north east) + (4pt,-2pt)$) --
+    ($(dmp.south east) +(-4pt,-2pt)$) -- ($(dmp.south east) + (-4pt, 2pt)$);
+    \draw [thick] ($(dmp.north west) + (4pt,-2pt) $) -- ($(dmp.north west)+(4pt,2pt)$) --
+    ($ (dmp.south west) +(-4pt, 2pt)$) -- ($(dmp.south west) + (-4pt, -2pt)$);
+}
+}, decorate]
