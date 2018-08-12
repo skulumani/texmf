@@ -27,7 +27,48 @@
 \usepackage{subcaption} % make it possible to include more than one captioned figure/table in a single float
 \graphicspath{{./figures/}}% path to images
 
-%------------- CITATION PACKAGES------------------------------
+% TIKZ
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepgfplotslibrary{groupplots,external}
+\usepackage{tikz-3dplot}
+\usetikzlibrary{decorations.markings,decorations.pathreplacing,calc}
+\usetikzlibrary{decorations.shapes}
+\usetikzlibrary{plotmarks,positioning}
+\usetikzlibrary{arrows,arrows.meta,shapes,decorations.pathmorphing,fit}
+\usetikzlibrary{shadows.blur}
+\usetikzlibrary{tikzmark}
+\usepackage{environ}
+
+\tikzset{help lines/.style={very thin,color=gray!50}} % modify the help lines style
+\tikzset{->-/.style={decoration={
+  markings,
+  mark=at position .5 with {\arrow{>}}},postaction={decorate}}}
+  
+  \makeatletter
+\newsavebox{\measure@tikzpicture}
+\NewEnviron{scaletikzpicturetowidth}[1]{%
+  \def\tikz@width{#1}%
+  \def\tikzscale{1}\begin{lrbox}{\measure@tikzpicture}%
+  \BODY
+  \end{lrbox}%
+  \pgfmathparse{#1/\wd\measure@tikzpicture}%
+  \edef\tikzscale{\pgfmathresult}%
+  \BODY
+}
+\makeatother
+
+% Tikz macros
+% Draw an arc denoting an angle using start and delta angles
+\newcommand{\drawarcdelta}[4]{
+  \draw ($#1+(#2:#4)$) arc[start angle=#2, delta angle=#3, radius=#4];
+}
+
+% Draw an arc with label denoting an angle using start and delta angles
+\newcommand{\drawlabeledarcdelta}[6]{
+  \drawarcdelta{#1}{#2}{#3}{#4}
+  \node at ($#1+(#2+#3/2:#6)$) {#5};
+}
 
 %\usepackage{listings}
 %\usepackage{accents}
