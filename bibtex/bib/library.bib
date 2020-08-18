@@ -18557,20 +18557,20 @@ Review:
   timestamp = {2019.03.20 17:03},
 }
 
-@InProceedings{5507177,
+@InProceedings{langel2010,
   author    = {S. E. {Langel} and {Samer M.} and F. {Chan} and B. S. {Pervan}},
-  title     = {Tightly coupled GPS/INS integration for differential carrier phase navigation systems using decentralized estimation},
   booktitle = {IEEE/ION Position, Location and Navigation Symposium},
+  title     = {Tightly coupled GPS/INS integration for differential carrier phase navigation systems using decentralized estimation},
   year      = {2010},
-  pages     = {397--409},
   month     = may,
+  pages     = {397--409},
   abstract  = {Much research has been conducted in the area of tightly coupled GPS/INS, and this work has resulted in a vast array of navigation algorithms. A common theme of these methods is that they operate on low rate GPS ranging measurements of code and carrier phase together with high rate raw inertial measurements, such as specific force and inertial angular velocity. For stand-alone (i.e., non-differential) GPS navigation applications, high data rate INS outputs can be properly accommodated with today's computer processors. For relative (i.e., differential) GPS navigation applications, the optimal analogous solution would be for the mobile user to have access to the reference station's raw inertial measurements along with its own. However, due to communication bandwidth limitations, it is generally not possible to broadcast high data rate inertial navigation data. In response, an alternative tightly-coupled, differential GPS/INS navigation system is developed here using a decentralized Kalman filtering approach, which can operate at manageable broadcast data rates.},
   doi       = {10.1109/PLANS.2010.5507177},
   groups    = {RFI Mitigation},
   issn      = {2153-3598},
   keywords  = {Global Positioning System;Kalman filters;coupled GPS-INS integration;carrier phase navigation systems;Kalman filtering;global positioning system;Global Positioning System;Navigation;Phase estimation;Force measurement;Velocity measurement;Phase measurement;Application software;Broadcasting;Angular velocity;Mobile communication},
   owner     = {shankar},
-  timestamp = {2019.03.20 17:03},
+  timestamp = {2020.04.21 08:04},
 }
 
 @Article{joerger2019,
@@ -19009,62 +19009,75 @@ Review:
   timestamp = {2020.04.14 16:04},
 }
 
-@Comment{jabref-meta: databaseType:bibtex;}
-
-@Comment{jabref-meta: grouping:
-0 AllEntriesGroup:;
-1 StaticGroup:Markings\;2\;0\;\;\;\;;
-2 StaticGroup:[shankar:]\;2\;1\;\;\;\;;
-2 StaticGroup:shankar:6\;2\;1\;\;\;\;;
-1 StaticGroup:Markings\;2\;1\;\;\;\;;
-2 StaticGroup:[shankar:]\;2\;1\;\;\;\;;
-2 StaticGroup:shankar:6\;2\;1\;\;\;\;;
-1 KeywordGroup:My Publications\;0\;author\;kulumani, shankar\;0\;0\;1\;\;\;\;;
-1 StaticGroup:Transfer Alignment\;0\;0\;0x8a8a8aff\;\;\;;
-1 StaticGroup:Headtracking\;0\;1\;\;\;\;;
-1 StaticGroup:Keywords\;2\;0\;\;\;\;;
-2 KeywordGroup:Astrodynamics\;0\;keywords\;astrodynamics\;0\;0\;1\;\;\;\;;
-2 KeywordGroup:Variational Integrator\;0\;keywords\;variational integrator\;0\;0\;1\;\;\;\;;
-2 SearchGroup:Robotics\;0\;keywords=robotics or keywords=robot or keywords=robots\;0\;0\;1\;\;\;\;;
-1 StaticGroup:Islam paper\;0\;1\;\;\;\;;
-1 StaticGroup:Computer Science\;0\;1\;\;\;\;;
-1 StaticGroup:2017 AAS Fall\;2\;0\;\;\;\;;
-2 StaticGroup:No attitude\;1\;1\;\;\;\;;
-2 StaticGroup:SMC\;1\;1\;\;\;\;;
-2 StaticGroup:Interesting papers\;0\;1\;\;\;\;;
-1 StaticGroup:Surface Landing\;2\;0\;\;\;\;;
-2 StaticGroup:Computer vision\;2\;1\;\;\;\;;
-2 StaticGroup:Hazard detection\;2\;1\;\;\;\;;
-2 StaticGroup:Feature Based\;1\;1\;\;\;\;;
-2 StaticGroup:Landmark tracking\;1\;1\;\;\;\;;
-2 StaticGroup:Structure from Motion\;2\;1\;\;\;\;;
-2 StaticGroup:Operational Missions\;2\;1\;\;\;\;;
-1 StaticGroup:SLAM\;1\;1\;\;\;\;;
-1 StaticGroup:Shape Reconstruction\;0\;0\;\;\;\;;
-2 StaticGroup:Survey Papers\;0\;1\;\;\;\;;
-1 StaticGroup:Laser asteroid shape\;0\;1\;\;\;\;;
-1 StaticGroup:Shape Models\;0\;1\;\;\;PDS citations for Asteroid shape models\;;
-1 StaticGroup:2018 AAS\;0\;1\;\;\;\;;
-1 StaticGroup:Circle Navigation\;0\;1\;\;\;\;;
-1 StaticGroup:Software\;0\;1\;\;\;\;;
-1 StaticGroup:Dissertations\;0\;1\;\;\;\;;
-1 StaticGroup:Polyhedron Potential Model\;0\;1\;\;\;\;;
-1 StaticGroup:Image Distortion\;0\;1\;\;\;\;;
-1 StaticGroup:Pupil tracking\;0\;0\;\;\;\;;
-1 StaticGroup:RFI Mitigation\;0\;1\;0xffffffff\;\;RCCT FutureNav Work\;;
-1 StaticGroup:GPS Background\;0\;1\;\;\;\;;
+@Article{chattaraj2013,
+  author    = {Chattaraj, S. and Mukherjee, A. and Chaudhuri, S. K.},
+  journal   = {Gyroscopy and Navigation},
+  title     = {Transfer alignment problem: Algorithms and design issues},
+  year      = {2013},
+  issn      = {2075-1109},
+  number    = {3},
+  pages     = {130--146},
+  volume    = {4},
+  abstract  = {Transfer alignment is the process of initializing the navigation sensors of tactical guided munitions launched from a platform. Through this method the misalignment between aligning and aligned body is estimated, which facilitates navigation of aligning system during its post-ejection course of flight. Measurements provided by navigation sensors of aligning system are noisy compared to those of the launch platform. Thus, excitation of the platform in the form of some deliberate manoeuvre is important in order to discriminate the signal from noise in the available measurement so that the misalignment can be effectively estimated. With advancement of technology, the prerequisites of accurate alignment have changed and with it the algorithms have also undergone continuous transformations. Extensive work has been done on this topic over the years. Here a detailed review of the evolution of transfer alignment problem has been presented. Emphasis is on statistical and algorithmic aspects of the problem rather than time line of work already done. This review provides a general guideline for new entrants to this field and should help practitioners with information regarding trends of research on this topic.},
+  file      = {:chattaraj2013.pdf:PDF},
+  groups    = {Transfer Alignment},
+  owner     = {shankar},
+  refid     = {Chattaraj2013},
+  timestamp = {2020.04.15 12:04},
+  url       = {https://doi.org/10.1134/S2075108713030036},
 }
+
+@InProceedings{wendel2004,
+  author    = {Jan Wendel and J{\"{u}}rgen Metzger and Gert Trommer},
+  booktitle = {AIAA Guidance, Navigation, and Control Conference and Exhibit},
+  title     = {Rapid Transfer Alignment in the Presence of Time Correlated Measurement and System Noise},
+  year      = {2004},
+  doi       = {10.2514/6.2004-4778},
+  eprint    = {https://arc.aiaa.org/doi/pdf/10.2514/6.2004-4778},
+  file      = {:wendel2004.pdf:PDF},
+  groups    = {Transfer Alignment},
+  owner     = {shankar},
+  timestamp = {2020.04.15 12:04},
+  url       = {https://arc.aiaa.org/doi/abs/10.2514/6.2004-4778},
+}
+
+@InProceedings{kaichen2008,
+  author     = {{Kai Chen} and {Gang Zhao} and {Zhongjie Meng} and {Jie Yan} and {Hao Lu}},
+  booktitle  = {2008 7\textsuperscript{th} World Congress on Intelligent Control and Automation},
+  title      = {Equivalent Approaches to Equations of Traditional Transfer Alignment and Rapid Transfer Alignment},
+  year       = {2008},
+  pages      = {892--895},
+  file       = {:kaichen2008.pdf:PDF},
+  groups     = {Transfer Alignment},
+  keywords   = {read},
+  owner      = {shankar},
+  readstatus = {read},
+  timestamp  = {2020.04.16 08:04},
+}
+
+@Book{ma2012,
+  title     = {An invitation to 3-d vision: from images to geometric models},
+  publisher = {Springer Science \& Business Media},
+  year      = {2012},
+  author    = {Ma, Yi and Soatto, Stefano and Kosecka, Jana and Sastry, S Shankar},
+  volume    = {26},
+  file      = {:ma2012.pdf:PDF},
+  owner     = {shankar},
+  timestamp = {2020-08-18},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
 
 @Comment{jabref-meta: protectedFlag:true;}
 
 @Comment{jabref-meta: saveActions:enabled;
-all-text-fields[ordinals_to_superscript]
-author[unicode_to_latex]
-booktitle[unicode_to_latex]
 date[normalize_date]
 editor[unicode_to_latex]
 journal[unicode_to_latex]
-month[normalize_month]
 pages[normalize_page_numbers]
+month[normalize_month]
+author[unicode_to_latex]
+all-text-fields[ordinals_to_superscript]
+booktitle[unicode_to_latex]
 title[html_to_latex,unicode_to_latex]
 ;}
