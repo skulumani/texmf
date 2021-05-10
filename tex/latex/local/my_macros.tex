@@ -44,7 +44,7 @@
 \newcommand{\dyn}{\ensuremath{\mathrm{dyn}}}
 \newcommand{\geo}{\ensuremath{\mathrm{geo}}}
 \newcommand{\Q}{\ensuremath{\mathsf{Q}}}
-\newcommand{\G}{\ensuremath{\mathsf{G}}}
+\renewcommand{\G}{\ensuremath{\mathsf{G}}}
 \newcommand{\g}{\ensuremath{\mathfrak{g}}}
 \newcommand{\Hess}[1]{\ensuremath{\mathrm{Hess} \, #1}}
 \newcommand{\refprop}[1]{Proposition \ref{prop:#1}}
@@ -129,6 +129,7 @@
 \crefrangeformat{equation}{(#3#1#4--#5#2#6)}
 \Crefrangeformat{equation}{(#3#1#4--#5#2#6)}
 \crefmultiformat{equation}{(#2#1#3)}{ and~(#2#1#3)}{, (#2#1#3)}{ and~(#2#1#3)}
+\Crefmultiformat{equation}{Equation~(#2#1#3)}{ and~(#2#1#3)}{, (#2#1#3)}{ and~(#2#1#3)}
 % edit cref citations for IEEE format
 \crefformat{figure}{Fig.~#2#1#3} % no abbreviation for equation numbers
 \Crefformat{figure}{Fig.~#2#1#3} % no abbreviation for equation numbers
