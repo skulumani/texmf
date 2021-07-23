@@ -11,7 +11,8 @@
                 decorations.shapes,
                 calc, patterns,
                 plotmarks, positioning, arrows.meta,
-                bending, matrix}
+                bending, matrix,
+                intersections}
 
 \tikzset{help lines/.style={very thin,color=gray!50}} % modify the help lines style
 
@@ -49,7 +50,24 @@
   \node at ($#1+(#2+#3/2:#6)$) {#5};
 }
 
-
+% \markangle[color]{A}{origin}{C}{mark}{radius}
+% draw a colored angle for the interior angle of A - B - C (angle at point B between vectors AB and BC)
+\newcommand\markangle[6][red]{ 
+    \begin{scope}
+    \path[clip] (#1) -- (#2) -- (#3);
+    \fill[color=red,fill opacity=0.5,draw=red,name path=circle]
+    (#1) circle (#4);
+  \end{scope}
+  % middle calculation
+  \path[name path=line one] (#1) -- (#2);
+  \path[name path=line two] (#1) -- (#3);
+  \path[%
+  name intersections={of=line one and circle, by={inter one}},
+  name intersections={of=line two and circle, by={inter two}}
+  ] (inter one) -- (inter two) coordinate[pos=.5] (middle);
+  % put mark
+  \node at ($(#1)!#5!(middle)$) {#6};
+}
 % Mechanical systems
 
 \tikzstyle{spring}=[thick,decorate,decoration={zigzag,pre length=0.3cm,post length=0.3cm,segment length=6}]
